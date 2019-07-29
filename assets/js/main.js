@@ -139,55 +139,63 @@ $(document).on('mousemove', function(e) {
 
 let count = 1;
 const bill = 3500;
-let sum = 0;
-fx.settings = { from: "RUB" }
-$('#price_day-more').click(function () {
-  count++
-  sum = bill * count;
-
-  // $('#price_day-out').text(count + ' суток')
-  // switch ($("#price input[name='currency']:checked").val()) {
-  //   case 'rub':
-  //     $('.price_out-text').text(sum + ' руб')
-  //     break;
-  //   case 'usd':
-  //     $('.price_out-text').text(fx(1000).from("RUB").to("USD"))
-  //     break;
-  //   case 'eur':
-  //     $('.price_out-text').text(fx(sum).from("RUB").to("EUR"))
-  //     break;
-  //   default:
-  //     break;
-  // }
-
-})
 
 $('#price_day-less').click(function () {
-  $('#price_day-out').val($('#price_day-out').val().split(' ')[0] - 1)
+  if (count!=1) {
+    count = parseInt($('#price_day-out').val().split(' ')[0])
+  }
+  if (count>1) {
+    count--
+  }
+  $('#price_day-out').val(count + ' суток')
+  calculate()
 })
 
 $('#price_day-more').click(function () {
-  $('#price_day-out').val($('#price_day-out').val().split(' ')[0] + 1)
-})
-
-
-$('#price_day-out').on('change', function () {
-  let value = $('#price_day-out').val();
-  if (value.indexOf(' суток') == -1) {
-    $('#price_day-out').val(value + ' суток')
+  if (count!=1) {
+    count = parseInt($('#price_day-out').val().split(' ')[0])
   }
-  setCaretPosition('price_day-out', $('#price_day-out').val().length - 6)
-  $('.price_out-text').text(bill * value.split(' ')[0])
+  count++
+  $('#price_day-out').val(count + ' суток')
+  calculate()
 })
 
 $('#price_day-out').on('input', function () {
+  count = parseInt($('#price_day-out').val().split(' ')[0])
+  if (isNaN(count)) {
+    count = 1
+  }
   let value = $('#price_day-out').val();
   if (value.indexOf(' суток') == -1) {
-    $('#price_day-out').val(value + ' суток')
+    $('#price_day-out').val(count+ ' суток')
   }
   setCaretPosition('price_day-out', $('#price_day-out').val().length - 6)
-  $('.price_out-text').text(bill * value.split(' ')[0])
+  calculate()
 })
+
+$("#price input[name='currency']").click(function() {
+  calculate()
+})
+
+function calculate() {
+  let sum = count * bill;
+  if (isNaN(sum)) {
+    sum = 0
+  }
+  switch ($("#price input[name='currency']:checked").val()) {
+    case 'rub':
+      $('.price_out-text').text(sum)
+      break;
+    case 'usd':
+      $('.price_out-text').text(sum * 0.016)
+      break;
+    case 'eur':
+      $('.price_out-text').text(sum * 0.014)
+      break;
+    default:
+      break;
+  }
+}
 
 function setCaretPosition(elemId, caretPos) {
   var elem = document.getElementById(elemId);
