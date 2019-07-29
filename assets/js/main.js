@@ -163,11 +163,11 @@ $('#price_day-more').click(function () {
 })
 
 $('#price_day-less').click(function () {
-  $('#price_day-out').val($('#price_day-out').val().split(' ') - 1)
+  $('#price_day-out').val($('#price_day-out').val().split(' ')[0] - 1)
 })
 
 $('#price_day-more').click(function () {
-  $('#price_day-out').val(1 + $('#price_day-out').val().split(' '))
+  $('#price_day-out').val($('#price_day-out').val().split(' ')[0] + 1)
 })
 
 

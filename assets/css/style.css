@@ -238,12 +238,12 @@ nav a, nav p {
 }
 
 #price_day-more {
-	content: url(/assets/img/icons/up.png);
+	content: url(../img/icons/up.png);
 	cursor: pointer;
 }
 
 #price_day-less {
-	content: url(/assets/img/icons/down.png);
+	content: url(../img/icons/down.png);
 	cursor: pointer;
 }
 
@@ -459,7 +459,7 @@ footer a, footer p {
 }
 
 .map_close {
-	content: url(/assets/img/icons/exit.png);
+	content: url(../img/icons/exit.png);
 	width: 14px;
 	height: 14px;
 }
