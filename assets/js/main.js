@@ -163,17 +163,22 @@ $('#price_day-more').click(function () {
 })
 
 $('#price_day-less').click(function () {
-  if (count>1) {
-    count--
-  }
-  sum = bill * count;
-  // $('#price_day-out').text(count + ' суток')
-  // $('.price_out-text').text(sum)
+  $('#price_day-out').val($('#price_day-out').val().split(' ') - 1)
 })
 
-// $('#price_day-out').on('change', function () {
-//   let value = $('#price_day-out').val();
-// })
+$('#price_day-more').click(function () {
+  $('#price_day-out').val(1 + $('#price_day-out').val().split(' '))
+})
+
+
+$('#price_day-out').on('change', function () {
+  let value = $('#price_day-out').val();
+  if (value.indexOf(' суток') == -1) {
+    $('#price_day-out').val(value + ' суток')
+  }
+  setCaretPosition('price_day-out', $('#price_day-out').val().length - 6)
+  $('.price_out-text').text(bill * value.split(' ')[0])
+})
 
 $('#price_day-out').on('input', function () {
   let value = $('#price_day-out').val();
@@ -181,6 +186,7 @@ $('#price_day-out').on('input', function () {
     $('#price_day-out').val(value + ' суток')
   }
   setCaretPosition('price_day-out', $('#price_day-out').val().length - 6)
+  $('.price_out-text').text(bill * value.split(' ')[0])
 })
 
 function setCaretPosition(elemId, caretPos) {
