@@ -203,10 +203,10 @@ function setCaretPosition(elemId, caretPos) {
   }
 }
 
-$(function() {
-   var iframe = $('#ourframe', parent.document.body);
-   iframe.height($(document.body).height());
-});
+
+
+var iframe = $('#ourframe', parent.document.body);
+iframe.height($(window).height() * 0.7);
 
 
 
