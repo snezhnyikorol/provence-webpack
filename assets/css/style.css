@@ -1,0 +1,836 @@
+/*  */
+
+html {
+	overflow-y:scroll;
+	overflow-x:hidden;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	overflow: hidden;
+}
+
+* {
+	font-family: 'Museo Sans Cyrl 500';
+}
+
+
+h1, h2, h3, h4, h5, h5, p {
+	margin: 0;
+}
+
+ul li{
+	list-style-type: none; 	
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	text-decoration: none;	
+	color: #000;
+}
+
+input:focus, a:focus {
+	outline: none;
+}
+
+.btn-primary {
+	border-radius: 5px;
+	background-color: #8d836a; 
+	color: #ffffff;
+	font-size: 18px;
+	padding: 16px 89px;
+	width: auto;
+	border: none;
+	box-sizing: border-box;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+	background-color: #5d5646;
+	color: #ffffff;
+}
+
+section {
+	padding: 100px 0;
+}
+
+.small {
+  font-size: 80%!important;
+}
+
+@media screen and (min-width: 1500px) {
+	.container {
+		max-width: 1500px;
+	}
+} 
+
+nav .container > div {
+	display: flex;
+	align-items: center;
+	padding: 57px 0;
+}
+
+nav a, nav p {
+	color: #000;	
+	font-family: 'Museo Sans Cyrl 500';
+	font-size: 16px;
+}
+
+.logo_text {
+	margin-left: 15px;
+	padding-left: 15px;
+	border-left: 1px solid #000;
+}
+
+.tel {
+	font-size: 24px;
+}
+
+.lang_container a {
+	color: #908771;
+	font-size: 18px;
+}
+
+.lang_container a:hover, .lang_container a:focus {
+	color: #000;
+}
+
+.top_slider-container {
+	background-color: rgba(250, 247, 244, 0.76);
+	padding: 41px 0;
+}
+
+
+.top_slider .slick-arrow {
+	position: absolute;
+	z-index: 5;
+	bottom: 0;
+	top: auto;
+	left: 20px;
+	height: 34px;
+	width: 33px;
+}
+
+.top_slider .slick-next {
+	left: 64px;
+	bottom: -1px;
+}
+
+.top_slider .slick-prev:before, .top_slider .slick-next:before {
+	content: url(../img/slider/arrow.png);
+	display: block;
+}
+
+.top_slider .slick-prev:before {
+	transform: rotate(180deg);
+}
+
+.top_slider-container h1 {
+	font-family: "Book Antiqua";
+	font-size: 44px;
+	font-weight: 300;
+	font-style: italic;
+	margin-bottom: 66px;
+}
+
+.top_slider-container p {
+	font-family: "Museo Sans Cyrl 300";
+	font-size: 21px;
+	font-weight: 400;
+}
+
+.section_title {
+	font-family: "Book Antiqua";
+	font-size: 33px;
+	font-weight: 300;
+	font-style: italic;
+	text-align: center;
+}
+
+.pluces_container {
+	margin-top: 97px;
+}
+
+.pluces_container img {
+	border-radius: 5px;
+}
+
+.pluces_text-container {
+	padding: 40px 54px;
+	text-align: center;
+	border-radius: 5px;
+	background-color: #f6f4f4;
+	width: 100%
+}
+
+.excursion_subtitle {
+	font-family: "Anglecia Pro Display";
+	font-size: 22px;
+	font-style: italic;
+	margin-top: 110px;
+	margin-bottom: 30px;
+}
+
+.excursion_container img {
+	border-radius: 5px;
+}
+
+.excursion_text-container {
+	padding: 40px 54px;
+	text-align: center;
+	border-radius: 5px;
+	width: 100%
+}
+
+.excursion .container {
+	position: relative;
+}
+
+#pillow1 {
+    top: 340px;
+    left: -150px;
+}
+
+#pillow2 {
+    left: 1419px;
+    top: 639px;
+}
+
+.price {
+	background-color: #f6f4f4;
+	padding: 90px 0;
+}
+
+.price .section_title {
+	margin-bottom: 100px;
+}
+
+.price_form {
+	margin: 0 auto;
+	box-shadow: 0 0 36px 2px rgba(0, 0, 0, 0.03);
+	border-radius: 10px;
+	background-color: #ffffff;
+	padding: 110px 0;
+}
+
+.price_subtitle {
+	color: #000000;
+	font-size: 18px;
+	font-weight: 400;
+	margin-bottom: 25px;
+}
+
+#price_day-out {
+	border-radius: 5px;
+	background-color: #fafafa;
+	font-size: 18px;
+	font-weight: 400;
+	padding: 15px 0 15px 25px;
+	margin-left: 15px;
+	border: none;
+}
+
+#price_day-out::placeholder {
+	color: #000;
+}
+
+#price_day-more {
+	content: url(/assets/img/icons/up.png);
+	cursor: pointer;
+}
+
+#price_day-less {
+	content: url(/assets/img/icons/down.png);
+	cursor: pointer;
+}
+
+.price_out-text {
+	font-size: 30px;
+	font-weight: 400;
+	margin: 0 10px 50px 0;
+}
+
+.price_label {
+	border-radius: 5px;
+	background-color: #fafafa;
+	color: #000000;
+	font-size: 25px;
+	font-weight: 400;
+	padding: 5px 15px;
+	cursor: pointer;
+}
+
+.price_currency {
+	margin: 0 8px;
+}
+
+.price_radio {
+	display:none;
+}
+
+.price_radio:checked + .price_label {
+	background-color: #8d836a;
+	color: #ffffff;
+}
+
+.rules {
+	background-color: #f6f4f4;
+	padding: 100px 0;
+}
+
+.rules_container {
+	margin-top: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.rules_container p {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.home .container {
+	border-radius: 5px;
+	background-color: #f6f4f4;
+	position: relative;
+	overflow: hidden;
+}
+
+.home_divan {
+	margin-left: -180px;
+}
+
+.booking_container {
+	border-radius: 5px;
+	background-color: #f6f4f4;
+	padding: 40px 22px;
+	text-align: center;
+}
+
+.booking .btn-primary {
+	padding: 15px 30px;
+}
+
+.booking_container h2 {
+	font-family: "Book Antiqua";
+	font-size: 25px;
+	font-weight: 300;
+	font-style: italic;
+}
+
+.booking_container p {
+	font-size: 15px;
+	font-weight: 400;
+}
+
+.comfort_text {
+	margin-left: 30px;
+}
+
+.comfort_item-inner {
+	height: 107px;	
+	margin: 50px 10px;
+	border-radius: 5px;
+	background-color: #fafafa;
+	position: relative;
+}
+
+.comfort_img {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+.comfort .comfort_item:nth-child(5) .comfort_img, .comfort .comfort_item:nth-child(11) .comfort_img {
+	right: 0;
+}
+
+.about .row {
+	margin-top: 60px;
+}
+
+.about_text {
+	margin-top: 30px;
+	margin-left: 40px;
+	color: #ffffff;
+	border-radius: 5px;
+	background-color: #8d836a;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 59px 68px 58px 60px;
+	position: relative;
+}
+
+
+.about_text::before {
+	content: ''; 
+	position: absolute;
+	left: -40px;
+	top: 50px;
+	border-style: solid;
+	border-width: 22.5px 40px 22.5px 0;
+	border-color: transparent #8d836a transparent transparent;
+}
+
+.about_leave {
+	position: absolute;
+    bottom: -40px;
+    right: -110px;
+}
+
+.book .container {
+	border-radius: 5px;
+	background-color: #fafafa;
+	padding: 70px 0;
+}
+
+.book .section_title {
+	margin-bottom: 40px;
+}
+
+footer .container > div {
+	display: flex;
+	align-items: center;
+	padding: 57px 0;
+}
+
+footer a, footer p {
+	color: #000;	
+	font-family: 'Museo Sans Cyrl 500';
+	font-size: 16px;
+}
+
+.logo_text {
+	margin-left: 15px;
+	padding-left: 15px;
+	border-left: 1px solid #000;
+}
+
+.footer_policy {
+	font-size: 16px;
+	font-weight: 400;
+	text-decoration: underline;
+}
+
+.map {
+	overflow-y: auto;
+	height: 100vh;
+	position: fixed;
+	top: 0px;
+	right: -1000px;
+	padding-top: 20vh;
+	background-color: #fafafa;
+	z-index: 1000;
+	transition: right 0.5s ease-in-out;
+}
+
+.map_title {
+	margin-right: 15px;
+	opacity: 0.6;
+	color: #000000;
+	font-family: "Anglecia Pro Display";
+	font-size: 18px;
+	font-style: italic;
+}
+
+.map .row {
+	margin-bottom: 8vh;
+}
+
+.map_container {
+	height: 60vh;
+}
+
+.map_item {
+	text-align: right;
+	color: #000000;
+	font-size: 18px;
+	font-weight: 400;
+}
+
+.map .btn {
+	margin-top: 30px;
+	padding: 10px 34px;
+}
+
+.map_close {
+	content: url(/assets/img/icons/exit.png);
+	width: 14px;
+	height: 14px;
+}
+
+.slider_bg {
+	position: absolute;
+	border-radius: 10px;
+	background-color: #f4f3f3;
+	width: 95%;
+	height: 90%;
+	top: 5%;
+	left: 2.5%;
+}
+
+.photo_slider {
+	max-width: 1264px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.photo_slider-img {
+	border-radius: 5px;
+}
+
+.photo_slider .slick-arrow {
+	height: 90%;
+	width: 6%;
+	z-index: 5;	
+}
+
+.photo_slider .slick-prev {
+	left: -6%;
+}
+
+.photo_slider .slick-next {
+	right: -6%;
+}
+
+.photo_slider .slick-prev:before, .photo_slider .slick-next:before {
+	content: url(../img/photo_slider/photo_slider-arrow.png);
+	display: block;
+		opacity: 1;
+}
+
+.photo_slider .slick-next:before {
+	transform: rotate(180deg);
+	margin-left: -65px;
+}
+
+.photo_slider .slick-prev:before {
+	margin-right: -65px;
+}
+
+.photo .btn-primary {
+	padding: 17px 51px;
+}
+
+.container, form {
+	position: relative;
+}
+
+.feather {
+	position: absolute;
+	z-index: 10;
+}
+
+#feather1 {
+    top: 320px;
+    left: -60px;
+}
+
+#feather2 {
+    top: 50px;
+    left: 1460px;
+}
+
+#feather3 {
+    top: 480px;
+    left: -100px;
+}
+
+#feather4 {
+    top: 320px;
+    left: 40px;
+}
+
+#feather5 {
+    top: 246px;
+    left: 1330px;
+}
+
+#feather6 {
+    top: 350px;
+    left: -90px;
+}
+
+#feather7 {
+    top: 240px;
+    left: -60px;
+}
+
+#feather8 {
+    top: 246px;
+    left: 1230px;
+}
+
+#feather9 {
+    top: 380px;
+    left: -110px;
+}
+
+#feather9 {
+    top: 380px;
+    left: -110px;
+}
+
+#feather10 {
+    top: -70px;
+    left: 1200px;
+}
+
+#feather11 {
+    top: 209px;
+    left: 1450px;
+}
+
+#feather12 {
+    top: 900px;
+    left: -390px;
+}
+
+#p1 {
+    top: 400px;
+    left: -70px;
+}
+
+#p2 {
+    top: 1010px;
+	left: 1307px;
+	
+}
+@media screen and (min-width: 1200px) {
+	.modal-dialog {
+		max-width: 1000px;
+	}
+}	
+
+
+@media screen and (max-width: 1500px) {
+
+	section {
+		padding: 80px 0;
+	}
+
+	.logo_text {
+		display: none;
+	}
+
+	.tel {
+		font-size: 21px;
+	}
+
+	.top_slider-container h1 {
+		font-size: 34px;
+		margin-bottom: 50px;
+	}
+
+	.pluces_text-container {
+		padding: 25px 15px;
+	}
+
+	.excursion_subtitle{
+		margin-top: 80px;
+	}
+
+	.excursion_text-container {
+		padding: 30px 34px;
+	}
+
+	.price_form {
+		padding: 80px 0;
+	}
+
+	.price .section_title {
+		margin-bottom: 80px;
+	}
+
+	.comfort_text {
+		font-size: 14px;
+	}
+
+	.comfort_img {
+		transform: scale(0.7);
+		right: -20px;
+		bottom: 0px;
+	}
+
+	.comfort .comfort_item:nth-child(11) .comfort_img {
+		bottom: auto;
+		top: -10px;
+		right: -20px;
+	}
+
+	.slider_bg {
+		width: 110%;
+		left: -5%;
+	}
+	
+	.about_text {
+		margin-left: 0;
+		margin-top: 0;
+		padding: 25px 40px;
+	}
+
+	.about_text::before {
+		content: none;
+	}
+} 
+
+@media screen and (max-width: 1200px) {
+	section {
+		padding: 60px 0;
+	}
+
+	.btn-primary {
+		padding: 12px 60px;
+		font-size: 16px;
+	}
+
+	.section_title {
+		font-size: 28px;
+	}
+
+	.pluces_container {
+		margin-top: 47px;
+	}
+
+	.pluces_container img {
+		height: 300px;
+		width: 100%;
+	}
+
+	.excursion_subtitle {
+		margin-top: 50px;
+	}
+
+	.social_container img {
+		width: 30px;
+	}
+
+	.tel {
+		font-size: 18px;
+	}
+
+	.lang_container a {
+		font-size: 16px;
+	}
+
+	.comfort_item-inner {
+		margin: 20px 10px;
+	}
+
+	.rules {
+		padding: 80px;
+	}
+
+	.rules_container {
+		margin-top: 55px;
+	}
+
+	.home .container {
+		padding: 20px;
+	}
+
+	.book .container {
+		padding: 50px 0;
+	}
+
+	footer .container > div {
+		padding: 37px 0;
+	}
+}
+
+@media screen and (max-width: 991.9px) {
+	nav .container > div {
+		padding: 20px 0;
+	}
+
+	.feather {
+		display: none;
+	}
+
+	.top_slider-container h1 {
+		font-size: 28px;
+		margin-bottom: 30px;
+	}
+
+	.top_slider-container p {
+		font-size: 18px;
+	}
+
+	.top_slider {
+		margin-top: 30px;
+	}
+
+	.home_divan {
+		margin-left: 0;
+	}
+
+	.home .container {
+		padding: 30px 0;
+	}
+
+	.home .section_title {
+		text-align: center!important;
+	}
+
+	.price_form {
+		padding: 50px 0;
+	}
+
+	.price_form .section_title {
+		margin-bottom: 10px;
+	}
+
+	.price_subtitle {
+		margin-bottom: 10px;
+		margin-top: 20px;
+	}
+
+	.price_out-text {
+		margin-bottom: 20px;
+	}
+
+	.booking_container {
+		margin-top: 30px;
+	}
+
+	.pluces_container img {
+		height: auto;
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.excursion_container {
+		text-align: center;
+	}
+
+	.pluces_container {
+		margin: 0 auto;
+		width: 80%;
+		margin-top: 30px;
+	}
+
+	.photo_slider .slick-next:before {
+		transform: scale(0.6) rotate(180deg);
+	}
+
+	.photo_slider .slick-prev:before {
+		transform: scale(0.6);
+	}
+}
+
+@media screen and (max-width: 479px) {
+	.lang_container {
+		display: none!important;
+	}
+
+	nav .row {
+		display: flex;
+		justify-content: space-between;
+	}
+}
