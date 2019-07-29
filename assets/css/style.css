@@ -684,6 +684,11 @@ footer a, footer p {
 		padding: 60px 0;
 	}
 
+
+	.map {
+		padding-top: 50px;
+	}
+
 	.btn-primary {
 		padding: 12px 60px;
 		font-size: 16px;
