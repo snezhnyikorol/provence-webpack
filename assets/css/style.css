@@ -37,7 +37,7 @@ input:focus, a:focus {
 	outline: none;
 }
 
-.btn-primary {
+.btn_primary {
 	border-radius: 5px;
 	background-color: #8d836a; 
 	color: #ffffff;
@@ -48,7 +48,7 @@ input:focus, a:focus {
 	box-sizing: border-box;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+.btn_primary:hover, .btn_primary:focus, .btn_primary:active {
 	background-color: #5d5646;
 	color: #ffffff;
 }
@@ -312,7 +312,7 @@ nav a, nav p {
 	text-align: center;
 }
 
-.booking .btn-primary {
+.booking .btn_primary {
 	padding: 15px 30px;
 }
 
@@ -513,7 +513,7 @@ footer a, footer p {
 	margin-right: -65px;
 }
 
-.photo .btn-primary {
+.photo .btn_primary {
 	padding: 17px 51px;
 }
 
@@ -523,7 +523,7 @@ footer a, footer p {
 
 .feather {
 	position: absolute;
-	z-index: 10;
+	z-index: 4;
 }
 
 #feather1 {
@@ -689,7 +689,7 @@ footer a, footer p {
 		padding-top: 50px;
 	}
 
-	.btn-primary {
+	.btn_primary {
 		padding: 12px 60px;
 		font-size: 16px;
 	}
