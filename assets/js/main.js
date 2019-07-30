@@ -217,11 +217,15 @@ function setCaretPosition(elemId, caretPos) {
   }
 }
 
+$('.lightbox').slickLightbox(
+  {
+    itemSelector: '.excursion_container img',
+    src: 'src'
+  }
+)
 
 
 var iframe = $('#ourframe', parent.document.body);
 iframe.height($(window).height() * 0.7);
-
-
 
 
