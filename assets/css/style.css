@@ -1,5 +1,18 @@
 /*  */
 
+.top_slider-container .small::selection {
+	background: #8d836a;
+	color: #fff;
+}
+
+::selection {
+	background: transparent;
+}
+
+::-moz-selection {
+	background: transparent;
+}
+
 html {
 	overflow-y:scroll;
 	overflow-x:hidden;
