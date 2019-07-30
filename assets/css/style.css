@@ -177,6 +177,7 @@ nav a, nav p {
 
 .excursion_container img {
 	border-radius: 5px;
+	cursor: pointer;
 }
 
 .excursion_text-container {
