@@ -420,6 +420,10 @@ footer a, footer p {
 	text-decoration: underline;
 }
 
+.menu_btn {
+	cursor: pointer;
+}
+
 .map_wrapper {
 	height: 100vh;
 	position: fixed;
@@ -474,6 +478,7 @@ footer a, footer p {
 	content: url(../img/icons/exit.png);
 	width: 14px;
 	height: 14px;
+	cursor: pointer;
 }
 
 .slider_bg {
