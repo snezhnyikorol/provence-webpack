@@ -353,6 +353,8 @@ nav a, nav p {
 
 .about .row {
 	margin-top: 60px;
+	align-items: flex-start;
+	justify-content: center;
 }
 
 .about_text {
@@ -648,6 +650,10 @@ footer a, footer p {
 		margin-bottom: 80px;
 	}
 
+	.comfort_item-inner {
+		margin: 20px 10px;
+	}
+
 	.comfort_text {
 		font-size: 14px;
 	}
@@ -675,9 +681,10 @@ footer a, footer p {
 		padding: 25px 40px;
 	}
 
-	.about_text::before {
-		content: none;
+	.about .row {
+		align-items: center;
 	}
+
 } 
 
 @media screen and (max-width: 1200px) {
@@ -742,6 +749,10 @@ footer a, footer p {
 
 	.book .container {
 		padding: 50px 0;
+	}
+
+	.about_text::before {
+		display: none;
 	}
 
 	footer .container > div {
@@ -810,6 +821,15 @@ footer a, footer p {
 	.pluces_container img {
 		height: auto;
 		width: auto;
+	}
+}
+
+@media screen and (max-width: 767px) {
+
+	.comfort .comfort_item:nth-child(7) .comfort_img {
+		transform: scale(0.5);
+		right: -30px;
+		top: 10px;
 	}
 }
 
