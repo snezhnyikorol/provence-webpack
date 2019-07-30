@@ -417,16 +417,25 @@ footer a, footer p {
 	text-decoration: underline;
 }
 
-.map {
-	overflow-y: auto;
+.map_wrapper {
 	height: 100vh;
 	position: fixed;
 	top: 0px;
-	right: -1000px;
+	right: -3000px;	
+	z-index: 1000;
+	width:100%;
+	transition: right 0.5s ease-in-out;
+	margin-right: 0px;
+}
+
+.substrate {
+	height: 100vh;
+}
+
+.map {
+	overflow-y: auto;
 	padding-top: 20vh;
 	background-color: #fafafa;
-	z-index: 1000;
-	transition: right 0.5s ease-in-out;
 }
 
 .map_title {
@@ -810,6 +819,10 @@ footer a, footer p {
 }
 
 @media screen and (max-width: 575px) {
+	.substrate {
+		display: none;
+	}
+
 	.excursion_container {
 		text-align: center;
 	}

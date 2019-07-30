@@ -49,25 +49,29 @@
 			</div>
 		</nav>
 		
-		<nav class="map col-xl-4 col-lg-5 col-sm-6">
-			<div class="col-xl-8 flex-column d-flex align-items-end">
-				<div class="row align-items-center">
-					<h2 class="map_title">Карта сайта</h2>
-					<div class="map_close"></div>
-				</div>	
-				<div class="map_container flex-column d-flex align-items-end justify-content-between">
-					<a href="#pluces" class="map_item">За что наши апартаменты получили<br>оценку 9,7 от booking.com?</a>
-					<a href="#excursion" class="map_item">Экскурсия по квартире</a>
-					<a href="#comfort" class="map_item">Что есть в номерах?</a>
-					<a href="#rules" class="map_item">Правила проживания</a>
-					<a href="#booking" class="map_item">Как происходит бронирование </a>
-					<a href="#photo" class="map_item">Фотографии номеров</a>
-					<a href="#about" class="map_item">О хозяйке</a>
-					<a href="" class="map_item">Как добраться до апартаментов?</a>
-					<a href="" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn_primary">Забронировать номер</a>
-				</div>			
+		<nav class="map_wrapper row">
+			<div class="substrate col-xl-8 col-lg-7 col-sm-6"></div>
+			<div class="map col-xl-4 col-lg-5 col-sm-6">
+				<div class="col-xl-8 col-11 flex-column d-flex align-items-end">
+					<div class="row align-items-center">
+						<h2 class="map_title">Карта сайта</h2>
+						<div class="map_close"></div>
+					</div>	
+					<div class="map_container flex-column d-flex align-items-end justify-content-between">
+						<a href="#pluces" class="map_item">За что наши апартаменты получили<br>оценку 9,7 от booking.com?</a>
+						<a href="#excursion" class="map_item">Экскурсия по квартире</a>
+						<a href="#comfort" class="map_item">Что есть в номерах?</a>
+						<a href="#rules" class="map_item">Правила проживания</a>
+						<a href="#booking" class="map_item">Как происходит бронирование </a>
+						<a href="#photo" class="map_item">Фотографии номеров</a>
+						<a href="#about" class="map_item">О хозяйке</a>
+						<a href="" class="map_item">Как добраться до апартаментов?</a>
+						<a href="" data-toggle="modal" data-target="#exampleModalCenter" class="btn btn_primary">Забронировать номер</a>
+					</div>			
+				</div>
 			</div>
 		</nav>
+
 
 		<section class="top_slider-container mt-0">
 			<div class="container">
@@ -198,7 +202,7 @@
 						<div class="col-lg-6 col-12 price_day d-flex flex-column align-items-center">
 							<p class="price_subtitle">Нужное количество суток:</p>
 							<div class="price_day-select row">
-								<input placeholder="1 сутки" id="price_day-out" autocomplete="off">
+								<input placeholder="1 сутки" id="price_day-out" autocomplete="off" readonly>
 								<div class="d-flex flex-column justify-content-around ml-3">
 									<div id="price_day-more"></div>
 									<div id="price_day-less"></div>
