@@ -89,10 +89,23 @@ section {
 	}
 } 
 
+.sticky {
+	padding: 57px 0;	
+}
+
+.fixed {
+	padding: 17px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	background-color: #fff; 
+}
+
 nav .container > div {
 	display: flex;
 	align-items: center;
-	padding: 57px 0;
 }
 
 nav a, nav p {
