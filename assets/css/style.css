@@ -1,5 +1,13 @@
 /*  */
 
+.ru {
+	display: block;
+}
+
+.en {
+	display: none;
+}
+
 .top_slider-container .small::selection {
 	background: #8d836a;
 	color: #fff;
