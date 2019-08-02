@@ -11,10 +11,15 @@ let menuState = false;
 var $root = $('html, body');
 
 $( document ).ready(function() {
-  $('.top_slider').slick()
+  $('.top_slider').slick(
+    {
+      lazyLoad: 'progressive',
+    }
+  )
   $('.photo_slider').slick(
     {
-      initialSlide: 7
+      initialSlide: 7,
+      lazyLoad: 'progressive'
     }
   )
   $('.video_slider').slick()
