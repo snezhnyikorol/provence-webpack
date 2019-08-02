@@ -8,11 +8,6 @@
 	display: none;
 }
 
-.top_slider-container .small::selection {
-	background: #8d836a;
-	color: #fff;
-}
-
 ::selection {
 	background: transparent;
 }
@@ -138,6 +133,15 @@ nav a, nav p {
 	padding: 41px 0;
 }
 
+.top_slider-container .small::selection {
+	background: #8d836a;
+	color: #fff;
+}
+
+.top_slider-container .small::-moz-selection {
+	background: #8d836a;
+	color: #fff;
+}
 
 .top_slider .slick-arrow {
 	position: absolute;
@@ -349,6 +353,7 @@ nav a, nav p {
 }
 
 .booking .btn_primary {
+	z-index: 5;
 	padding: 15px 30px;
 }
 
@@ -466,12 +471,14 @@ footer a, footer p {
 	right: -3000px;	
 	z-index: 1000;
 	width:100%;
-	transition: right 0.5s ease-in-out;
+	/* transition: right 0.5s ease-in-out; */
 	margin-right: 0px;
 }
 
 .substrate {
 	min-height: 100vh;
+	background: #8d836a;
+	opacity: 0;
 }
 
 .map {
@@ -633,16 +640,16 @@ footer a, footer p {
 }
 
 #feather9 {
-    top: 380px;
+    top: 530px;
     left: -110px;
 }
 
-#feather10 {
+#feather10, #feather13 {
     top: -70px;
     left: 1200px;
 }
 
-#feather11 {
+#feather11, #feather14 {
     top: 209px;
     left: 1450px;
 }
@@ -652,8 +659,8 @@ footer a, footer p {
     left: -390px;
 }
 
-#p1 {
-    top: 400px;
+#p1, #p3 {
+    top: 500px;
     left: -70px;
 }
 
