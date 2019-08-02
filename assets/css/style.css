@@ -1,13 +1,5 @@
 /*  */
 
-#rc-bookings-widget-root {
-	width: 100%;
-}
-
-.rc-container {
-	width: 100%;
-}
-
 .eng {
 	display: none;
 }
@@ -679,17 +671,18 @@ footer a, footer p {
 	
 }
 
-@media screen and (min-width: 1200px) {
-	.modal-dialog {
-		max-width: 1000px;
-	}
-}
 
 @media screen and (min-width: 746px) {
 	.modal-dialog {
 		max-width: 90%;
 	}
 }	
+
+@media screen and (min-width: 1200px) {
+	.modal-dialog {
+		max-width: 1000px;
+	}
+}
 
 
 @media screen and (max-width: 1500px) {
@@ -964,4 +957,24 @@ footer a, footer p {
 		display: flex;
 		justify-content: space-between;
 	}
+}
+
+
+/* widget styles */
+
+#rc-bookings-widget-root {
+	width: 100%;
+}
+
+.rc-container {
+	width: 100%;
+}
+
+.rc-day {
+	cursor: pointer;
+}
+
+.rc-disabled {
+	opacity: 0.3;
+	cursor: not-allowed;
 }

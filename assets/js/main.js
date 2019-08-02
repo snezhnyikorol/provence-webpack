@@ -329,8 +329,25 @@ function translateWidget() {
     $("[for=rc-checkin]").html('Сheck in&nbsp;')
     $("[for=rc-checkout]").html('Сheck out&nbsp;')
     $("[for=guests]").html('Guests&nbsp;')
-    $("[value=9+]").text('more than 9')
+    $('.rc-search_form__item__guests__control option:eq(8)').text('more than 9');
     $(".rc-search_form__search_btn").text('Search')
+    $(".rc-text-center").text('Loading...')
+    $(".rc-flat__price__cur").text('RUB per day')
+    $(".rc-flat__more__btn").text('More')
+    $(".rc-flat__book__btn").text('Book')
+    $(".rc-modal-title").text('Booking')
+    $(".rc-flat__price__cur").text('RUB per day')
+    $(".rc-flat__price__cur").text('RUB per day')
+    $(".rc-flat__price__cur").text('RUB per day')
+    $(".rc-flat__price__cur").text('RUB per day')
+    $(".rc-flat__price__cur").text('RUB per day')
+    $(".rc-flat__price__cur").text('RUB per day')
+    $(".rc-flat__price__cur").text('RUB per day')
+    $(".rc-flat__price__cur").text('RUB per day')
+    $(".rc-flat__price__cur").text('RUB per day')
+    $(".rc-flat__price__cur").text('RUB per day')
+    
+
 }
 
 
