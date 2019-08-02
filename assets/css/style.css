@@ -1,5 +1,13 @@
 /*  */
 
+#rc-bookings-widget-root {
+	width: 100%;
+}
+
+.rc-container {
+	width: 100%;
+}
+
 .eng {
 	display: none;
 }
