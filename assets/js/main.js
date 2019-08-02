@@ -7,6 +7,7 @@ $(window).scroll(function(){
 });
 
 let menuState = false;
+let lang = 'rus'
 
 var $root = $('html, body');
 
@@ -41,6 +42,26 @@ $('a[href^="#"]').click(function () {
 
     return false;
 });
+
+$('#lang_eng').click(function (event) {
+  if (lang == 'rus') {
+    lang = 'eng'
+    $('.rus').toggle() 
+    $('.eng').toggle()
+    $('#price_day-out').attr('placeholder', '1 day')
+  }
+  event.preventDefault()
+})
+
+$('#lang_rus').click(function (event) {
+  if (lang == 'eng') {
+    lang = 'rus'
+    $('.rus').toggle() 
+    $('.eng').toggle()
+    $('#price_day-out').attr('placeholder', '1 сутки') 
+  }
+  event.preventDefault()
+})
 
 $('.menu_btn').click(function () {
   menuState = !menuState;
@@ -212,7 +233,12 @@ $('#price_day-less').click(function () {
   if (count>1) {
     count--
   }
-  $('#price_day-out').val(count + ' суток')
+  if (lang == 'rus') {
+    $('#price_day-out').val(count + ' суток')
+  } else {
+    $('#price_day-out').val(count + ' days')
+  }
+
   calculate()
 })
 
@@ -221,7 +247,11 @@ $('#price_day-more').click(function () {
     count = parseInt($('#price_day-out').val().split(' ')[0])
   }
   count++
-  $('#price_day-out').val(count + ' суток')
+  if (lang == 'rus') {
+    $('#price_day-out').val(count + ' суток')
+  } else {
+    $('#price_day-out').val(count + ' days')
+  }
   calculate()
 })
 
@@ -231,10 +261,18 @@ $('#price_day-out').on('input', function () {
     count = 1
   }
   let value = $('#price_day-out').val();
-  if (value.indexOf(' суток') == -1) {
-    $('#price_day-out').val(count+ ' суток')
+  if (lang == 'rus') {
+    if (value.indexOf(' суток') == -1) {
+      $('#price_day-out').val(count+ ' суток')
+    }
+    setCaretPosition('price_day-out', $('#price_day-out').val().length - 6)
+  } else {
+    if (value.indexOf(' days') == -1) {
+      $('#price_day-out').val(count+ ' days')
+    }
+    setCaretPosition('price_day-out', $('#price_day-out').val().length - 5)
   }
-  setCaretPosition('price_day-out', $('#price_day-out').val().length - 6)
+
   calculate()
 })
 
