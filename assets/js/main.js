@@ -11,7 +11,21 @@ let menuState = false;
 var $root = $('html, body');
 
 $( document ).ready(function() {
-  move();
+  $('.top_slider').slick()
+  $('.photo_slider').slick(
+    {
+      initialSlide: 7
+    }
+  )
+  $('.video_slider').slick()
+  
+  $('.lightbox').slickLightbox(
+    {
+      itemSelector: '.excursion_container img',
+      src: 'data-full'
+    }
+  )
+  move()
 });
 
 
@@ -262,13 +276,6 @@ function setCaretPosition(elemId, caretPos) {
       }
   }
 }
-
-$('.lightbox').slickLightbox(
-  {
-    itemSelector: '.excursion_container img',
-    src: 'data-full'
-  }
-)
 
 
 var iframe = $('#ourframe', parent.document.body);

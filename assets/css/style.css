@@ -659,9 +659,14 @@ footer a, footer p {
     left: -390px;
 }
 
-#p1, #p3 {
-    top: 500px;
+#p1 {
+    top: 650px;
     left: -70px;
+}
+
+#p3 {
+    top: 500px;
+    left: -70px;	
 }
 
 #p2 {
