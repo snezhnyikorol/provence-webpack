@@ -1,3 +1,7 @@
 .rc-disabled {
     opacity: 0.5;
 }
+
+.rc-day {
+    cursor: pointer;
+}

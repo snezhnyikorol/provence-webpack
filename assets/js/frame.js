@@ -1,10 +1,7 @@
-// $(document).ready(function(){
-//     var head  = document.getElementsByTagName('head')[0];
-//     var link  = document.createElement('link');
-//     link.id   = cssId;
-//     link.rel  = 'stylesheet';
-//     link.type = 'text/css';
-//     link.href = 'assets/css/styleFrame.css';
-//     link.media = 'all';
-//     head.appendChild(link);
-// });
+let url_string = window.location.href
+let url = new URL(url_string)
+let lang = url.searchParams.get("lang")
+
+if (lang == 'eng') {
+    $("[for=rc-checkin]").html('Arrival&nbsp;')
+}
