@@ -7,7 +7,7 @@ $(window).scroll(function(){
 });
 
 let menuState = false;
-let lang = 'rus'
+var lang = 'rus'
 
 var $root = $('html, body');
 
@@ -48,8 +48,8 @@ $('#lang_eng').click(function (event) {
     lang = 'eng'
     $('.rus').toggle() 
     $('.eng').toggle()
+    $('#ourframe').attr('src', $('#ourframe').attr('src'))
     document.title = 'Provence Studios'
-    $('#ourframe').attr('src', 'frame.html?lang=eng')
     $('#price_day-out').attr('placeholder', '1 day')
   }
   event.preventDefault()
@@ -60,8 +60,8 @@ $('#lang_rus').click(function (event) {
     lang = 'rus'
     $('.rus').toggle() 
     $('.eng').toggle()
+    $('#ourframe').attr('src', $('#ourframe').attr('src'))
     document.title = 'Студии Прованс'
-    $('#ourframe').attr('src', 'frame.html?lang=rus')
     $('#price_day-out').attr('placeholder', '1 сутки') 
   }
   event.preventDefault()
