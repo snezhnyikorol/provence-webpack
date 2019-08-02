@@ -678,9 +678,16 @@ footer a, footer p {
 	left: 1307px;
 	
 }
+
 @media screen and (min-width: 1200px) {
 	.modal-dialog {
 		max-width: 1000px;
+	}
+}
+
+@media screen and (min-width: 746px) {
+	.modal-dialog {
+		max-width: 90%;
 	}
 }	
 

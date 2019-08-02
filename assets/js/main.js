@@ -48,6 +48,7 @@ $('#lang_eng').click(function (event) {
     lang = 'eng'
     $('.rus').toggle() 
     $('.eng').toggle()
+    translateWidget()
     $('#ourframe').attr('src', $('#ourframe').attr('src'))
     document.title = 'Provence Studios'
     $('#price_day-out').attr('placeholder', '1 day')
@@ -324,8 +325,12 @@ function setCaretPosition(elemId, caretPos) {
   }
 }
 
-
-var iframe = $('#ourframe', parent.document.body);
-iframe.height($(window).height() * 0.7);
+function translateWidget() {
+    $("[for=rc-checkin]").html('Сheck in&nbsp;')
+    $("[for=rc-checkout]").html('Сheck out&nbsp;')
+    $("[for=guests]").html('Guests&nbsp;')
+    $("[value=9+]").text('more than 9')
+    $(".rc-search_form__search_btn").text('Search')
+}
 
 
