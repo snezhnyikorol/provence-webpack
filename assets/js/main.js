@@ -266,7 +266,7 @@ function setCaretPosition(elemId, caretPos) {
 $('.lightbox').slickLightbox(
   {
     itemSelector: '.excursion_container img',
-    src: 'src'
+    src: 'data-full'
   }
 )
 
