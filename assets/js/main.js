@@ -48,6 +48,7 @@ $('#lang_eng').click(function (event) {
     lang = 'eng'
     $('.rus').toggle() 
     $('.eng').toggle()
+    document.title = 'Provence Studios'
     $('#price_day-out').attr('placeholder', '1 day')
   }
   event.preventDefault()
@@ -58,6 +59,7 @@ $('#lang_rus').click(function (event) {
     lang = 'rus'
     $('.rus').toggle() 
     $('.eng').toggle()
+    document.title = 'Студии Прованс'
     $('#price_day-out').attr('placeholder', '1 сутки') 
   }
   event.preventDefault()
