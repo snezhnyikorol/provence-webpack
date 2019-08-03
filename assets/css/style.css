@@ -17,6 +17,9 @@ html {
 
 body {
 	overflow-x:hidden;
+}
+
+.top_slider-container {
 	padding-top: 167px;
 }
 
@@ -962,8 +965,8 @@ footer a, footer p {
 		padding: 15px 0;
 	}
 
-	body {
-		padding-top: 110px;
+	.top_slider-container {
+		margin-top: 110px;
 	}
 
 	.lang_container {
