@@ -59,8 +59,14 @@ input:focus, a:focus {
 	box-sizing: border-box;
 }
 
-.btn_primary:hover, .btn_primary:focus, .btn_primary:active {
+.btn_primary:hover, .btn_primary:active {
 	background-color: #5d5646;
+	color: #ffffff;
+	box-shadow: none;
+}
+
+.btn_primary:focus
+{
 	color: #ffffff;
 	box-shadow: none;
 }
@@ -996,4 +1002,35 @@ footer a, footer p {
 .rc-disabled {
 	opacity: 0.3;
 	cursor: not-allowed;
+}
+
+
+
+/* .eabr-cta-component{
+	background-color: rgb(246, 244, 244) !important;
+} */
+
+.eabr-header-title {
+	font-family: "Book Antiqua";
+    font-size: 33px !important;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+}
+
+.eabr-cta-container {
+	background-color: rgba(246, 244, 244, 0) !important;
+}
+
+.widget {
+	background-color: rgb(246, 244, 244);
+}
+
+.eabr-button-component {
+	background-color: #8d836a !important;
+    color: #ffffff !important;
+}
+
+.eabr-booking-rating-value {
+	color: #ffffff !important;
 }
