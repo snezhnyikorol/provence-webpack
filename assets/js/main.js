@@ -398,6 +398,23 @@ function translateWidget(to) {
     <!-- react-text: 148 -->&nbsp;<!-- /react-text --><!-- react-text: 149 -->For romantic meetings<!-- /react-text --></div></div></div></div><div class="rc-row">
     <div class="rc-col-sm-12 rc-flat__more__info__desc"><p>&nbsp;Center, to Nevsky 15 minutes on foot. Nearby are three metro stations (Vladimirskaya, Dostoevskaya, Zvenigorodskaya), restaurants, shops, cafes, market, shopping centers, oceanarium. Nevsky is 1 km away. Cozy studio apartment in the historic city center. The apartment is completely ready for a comfortable stay - design repair, there are all necessary furniture and appliances, cable TV, Internet. double bed 160 cm, single bed 90 cm, chest of drawers, wardrobe, TV, dining table, chairs, stools, bedding, kitchen utensils, dishes.<br>Cozy, comfortable, reliable.</p>
     </div></div><div class="rc-row"><div class="rc-col-sm-12 rc-flat__more__info__map_wrapper"></div></div>`)
-    
+
+
+    $(".rc-modal-title").text('Booking')
   }
+}
+
+var myElement = document.getElementById('rc-bookings-widget-root');
+
+if(window.addEventListener) {
+   myElement.addEventListener('DOMSubtreeModified', contentChanged, false);
+} else
+   if(window.attachEvent) {
+      myElement.attachEvent('DOMSubtreeModified', contentChanged);
+   }
+
+function contentChanged() {
+    translateWidget(lang)
+   // this function will run each time the content of the DIV changes
+
 }
