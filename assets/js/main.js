@@ -46,8 +46,8 @@ $('a[href^="#"]').click(function () {
 $('#lang_eng').click(function (event) {
   if (lang == 'rus') {
     lang = 'eng'
-    $('.rus').toggle() 
-    $('.eng').toggle()
+    $('.rus').css('display', 'none') 
+    $('.eng').css('display', 'inline-block') 
     translateWidget()
     $('#ourframe').attr('src', $('#ourframe').attr('src'))
     document.title = 'Provence Studios'
@@ -59,8 +59,8 @@ $('#lang_eng').click(function (event) {
 $('#lang_rus').click(function (event) {
   if (lang == 'eng') {
     lang = 'rus'
-    $('.rus').toggle() 
-    $('.eng').toggle()
+    $('.rus').css('display', 'inline-block') 
+    $('.eng').css('display', 'none') 
     $('#ourframe').attr('src', $('#ourframe').attr('src'))
     document.title = 'Студии Прованс'
     $('#price_day-out').attr('placeholder', '1 сутки') 
@@ -332,10 +332,10 @@ function translateWidget() {
     $('.rc-search_form__item__guests__control option:eq(8)').text('more than 9');
     $(".rc-search_form__search_btn").text('Search')
     $(".rc-text-center").text('Loading...')
-    $(".rc-flat__price__cur").html(`<span class="rc-flat__price__cur"><!-- react-text: 97 -->RUB<!-- /react-text --><!-- react-text: 98 --> per day<!-- /react-text --></span>`)
+    $(".rc-flat__price__cur").text('RUB per day')
     $(".rc-flat__more__btn").text('More')
     $(".rc-flat__book__btn").text('Book')
-    $(".rc-modal-title").text('Booking')
+    $(".rc-flat_list .rc-flat:eq(0)").find('.rc-flat__info__adress').text('St. Petersburg, St. Petersburg, Socialist 13')
     // $(".rc-flat__price__cur").text('RUB per day')
     // $(".rc-flat__price__cur").text('RUB per day')
     // $(".rc-flat__price__cur").text('RUB per day')
