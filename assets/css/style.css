@@ -9,14 +9,12 @@
 }
 
 html {
-	overflow-y:scroll;
-	overflow-x:hidden;
 	height: 100%;
 	width: 100%;
 }
 
-body {
-	overflow-x:hidden;
+section {
+	overflow: hidden;
 }
 
 .top_slider-container {
@@ -50,6 +48,7 @@ input:focus, a:focus {
 }
 
 .btn_primary {
+	z-index: 5;
 	border-radius: 5px;
 	background-color: #8d836a; 
 	color: #ffffff;
