@@ -2,7 +2,7 @@ $(window).scroll(function(){
   var sticky = $('.sticky'),
       scroll = $(window).scrollTop();
 
-  if (scroll >= 100) {
+  if (scroll >= 50) {
     sticky.addClass('fixed');
   }
   else {
