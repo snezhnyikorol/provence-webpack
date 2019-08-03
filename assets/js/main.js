@@ -9,6 +9,8 @@ $(window).scroll(function(){
 let menuState = false;
 var lang = 'rus'
 
+$('.eng').toggle()
+
 var $root = $('html, body');
 
 $( document ).ready(function() {
@@ -46,8 +48,8 @@ $('a[href^="#"]').click(function () {
 $('#lang_eng').click(function (event) {
   if (lang == 'rus') {
     lang = 'eng'
-    $('.rus').css('display', 'none') 
-    $('.eng').css('display', 'inline-block') 
+    $('.rus').toggle()
+    $('.eng').toggle()
     translateWidget()
     $('#ourframe').attr('src', $('#ourframe').attr('src'))
     document.title = 'Provence Studios'
@@ -59,8 +61,8 @@ $('#lang_eng').click(function (event) {
 $('#lang_rus').click(function (event) {
   if (lang == 'eng') {
     lang = 'rus'
-    $('.rus').css('display', 'inline-block') 
-    $('.eng').css('display', 'none') 
+    $('.rus').toggle()
+    $('.eng').toggle()
     $('#ourframe').attr('src', $('#ourframe').attr('src'))
     document.title = 'Студии Прованс'
     $('#price_day-out').attr('placeholder', '1 сутки') 
@@ -325,7 +327,8 @@ function setCaretPosition(elemId, caretPos) {
   }
 }
 
-function translateWidget() {
+function translateWidget(to) {
+  if (to == 'eng') {
     $("[for=rc-checkin]").html('Сheck in&nbsp;')
     $("[for=rc-checkout]").html('Сheck out&nbsp;')
     $("[for=guests]").html('Guests&nbsp;')
@@ -336,6 +339,29 @@ function translateWidget() {
     $(".rc-flat__more__btn").text('More')
     $(".rc-flat__book__btn").text('Book')
     $(".rc-flat_list .rc-flat:eq(0)").find('.rc-flat__info__adress').text('St. Petersburg, St. Petersburg, Socialist 13')
+    // $(".rc-flat_list .rc-flat:eq(0)").html(``)
+    // $(".rc-flat__price__cur").text('RUB per day')
+    // $(".rc-flat__price__cur").text('RUB per day')
+    // $(".rc-flat__price__cur").text('RUB per day')
+    // $(".rc-flat__price__cur").text('RUB per day')
+    // $(".rc-flat__price__cur").text('RUB per day')
+    // $(".rc-flat__price__cur").text('RUB per day')
+    // $(".rc-flat__price__cur").text('RUB per day')
+    // $(".rc-flat__price__cur").text('RUB per day')
+    // $(".rc-flat__price__cur").text('RUB per day')
+    // $(".rc-flat__price__cur").text('RUB per day')
+  }
+    $("[for=rc-checkin]").html('Сheck in&nbsp;')
+    $("[for=rc-checkout]").html('Сheck out&nbsp;')
+    $("[for=guests]").html('Guests&nbsp;')
+    $('.rc-search_form__item__guests__control option:eq(8)').text('more than 9');
+    $(".rc-search_form__search_btn").text('Search')
+    $(".rc-text-center").text('Loading...')
+    $(".rc-flat__price__cur").text('RUB per day')
+    $(".rc-flat__more__btn").text('More')
+    $(".rc-flat__book__btn").text('Book')
+    $(".rc-flat_list .rc-flat:eq(0)").find('.rc-flat__info__adress').text('St. Petersburg, St. Petersburg, Socialist 13')
+    // $(".rc-flat_list .rc-flat:eq(0)").html(``)
     // $(".rc-flat__price__cur").text('RUB per day')
     // $(".rc-flat__price__cur").text('RUB per day')
     // $(".rc-flat__price__cur").text('RUB per day')

@@ -1,13 +1,5 @@
 /*  */
 
-.eng {
-	display: none;
-}
-
-.rus {
-	display: inline-block;
-}
-
 ::selection {
 	background: transparent;
 }
