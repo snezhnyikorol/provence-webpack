@@ -404,17 +404,17 @@ function translateWidget(to) {
   }
 }
 
-var myElement = document.getElementById('rc-bookings-widget-root');
+// var myElement = document.getElementById('rc-bookings-widget-root');
 
-if(window.addEventListener) {
-   myElement.addEventListener('DOMSubtreeModified', contentChanged, false);
-} else
-   if(window.attachEvent) {
-      myElement.attachEvent('DOMSubtreeModified', contentChanged);
-   }
+// if(window.addEventListener) {
+//    myElement.addEventListener('DOMSubtreeModified', contentChanged, false);
+// } else
+//    if(window.attachEvent) {
+//       myElement.attachEvent('DOMSubtreeModified', contentChanged);
+//    }
 
-function contentChanged() {
-    translateWidget(lang)
-   // this function will run each time the content of the DIV changes
+// function contentChanged() {
+//     translateWidget(lang)
+//    // this function will run each time the content of the DIV changes
 
-}
+// }

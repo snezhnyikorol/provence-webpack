@@ -15,6 +15,10 @@ html {
 	width: 100%;
 }
 
+body {
+	padding-top: 167px;
+}
+
 * {
 	font-family: 'Museo Sans Cyrl 500';
 }
@@ -73,7 +77,14 @@ section {
 } 
 
 .sticky {
-	padding: 57px 0;	
+	padding: 57px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	background-color: #fff; 
+	transition: padding 200ms;	
 }
 
 .fixed {
