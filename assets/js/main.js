@@ -50,7 +50,7 @@ $('#lang_eng').click(function (event) {
     lang = 'eng'
     $('.rus').toggle()
     $('.eng').toggle()
-    translateWidget()
+    translateWidget('eng')
     $('#ourframe').attr('src', $('#ourframe').attr('src'))
     document.title = 'Provence Studios'
     $('#price_day-out').attr('placeholder', '1 day')
