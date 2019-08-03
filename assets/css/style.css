@@ -15,10 +15,6 @@ html {
 	width: 100%;
 }
 
-body {
-	overflow: hidden;
-}
-
 * {
 	font-family: 'Museo Sans Cyrl 500';
 }
@@ -119,6 +115,7 @@ nav a, nav p {
 .lang_container a:hover, .lang_container a:focus {
 	color: #000;
 }
+
 
 .top_slider-container {
 	background-color: rgba(250, 247, 244, 0.76);
@@ -946,7 +943,7 @@ footer a, footer p {
 
 @media screen and (max-width: 479px) {
 	.lang_container {
-		display: none!important;
+		/* display: none!important; */
 	}
 
 	nav .row {
