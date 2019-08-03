@@ -685,7 +685,7 @@ footer a, footer p {
 	}
 
 	.logo_text {
-		display: none;
+		visibility: hidden;
 	}
 
 	.tel {
@@ -943,7 +943,7 @@ footer a, footer p {
 
 @media screen and (max-width: 479px) {
 	.lang_container {
-		/* display: none!important; */
+		display: none!important;
 	}
 
 	nav .row {

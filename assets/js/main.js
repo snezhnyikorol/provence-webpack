@@ -13,7 +13,6 @@ $(window).scroll(function(){
 let menuState = false;
 var lang = 'rus'
 
-$('.eng').toggle()
 
 var $root = $('html, body');
 
@@ -48,6 +47,9 @@ $('a[href^="#"]').click(function () {
 
     return false;
 });
+
+
+$('.eng').toggle()
 
 $('#lang_eng').click(function (event) {
   if (lang == 'rus') {
@@ -342,6 +344,60 @@ function translateWidget(to) {
     $(".rc-flat__price__cur").text('RUB per day')
     $(".rc-flat__more__btn").text('More')
     $(".rc-flat__book__btn").text('Book')
-    $(".rc-flat_list .rc-flat:eq(0) .rc-flat__info").html(`<span class="rc-flat__info__adress">St. Petersburg, St. Petersburg, Socialist 13</span><br><!-- react-text: 70 -->m. Zvenigorodskaya<!-- /react-text --><br><!-- react-text: 72 -->Rooms: <!-- /react-text --><!-- react-text: 73 -->1<!-- /react-text --><br><!-- react-text: 75 -->Sleeps: <!-- /react-text --><!-- react-text: 76 -->2+2<!-- /react-text --><br><span><!-- react-text: 79 -->Floor: <!-- /react-text --><!-- react-text: 80 -->1<!-- /react-text --></span><div class="rc-flat__info__services" style=""><i class="rc-icon rc-icon-washing_machine" title="Стиральная машина"></i><i class="rc-icon rc-icon-wi_fi" title="Интернет Wi-Fi"></i><i class="rc-icon rc-icon-tv" title="Телевизор"></i><i class="rc-icon rc-icon-kids" title="Можно с детьми"></i><i class="rc-icon rc-icon-refrigerator" title="Холодильник"></i><i class="rc-icon rc-icon-stove" title="Кухонная плита"></i><i class="rc-icon rc-icon-microwave" title="СВЧ печь"></i><i class="rc-icon rc-icon-iron" title="Утюг с гладильной доской"></i><i class="rc-icon rc-icon-waterheater" title="Водонагреватель"></i><i class="rc-icon rc-icon-cabletv" title="Кабельное Телевидение"></i><i class="rc-icon rc-icon-romantic" title="Для романтических встреч"></i></div>`)
+    $(".rc-flat_list .rc-flat:eq(0) .rc-flat__info").html(`<span class="rc-flat__info__adress">St. Petersburg, Socialist 13</span><br><!-- react-text: 70 -->m. Zvenigorodskaya<!-- /react-text --><br><!-- react-text: 72 -->Rooms: <!-- /react-text --><!-- react-text: 73 -->1<!-- /react-text --><br><!-- react-text: 75 -->Sleeps: <!-- /react-text --><!-- react-text: 76 -->2+2<!-- /react-text --><br><span><!-- react-text: 79 -->Floor: <!-- /react-text --><!-- react-text: 80 -->1<!-- /react-text --></span><div class="rc-flat__info__services" style=""><i class="rc-icon rc-icon-washing_machine" title="Стиральная машина"></i><i class="rc-icon rc-icon-wi_fi" title="Интернет Wi-Fi"></i><i class="rc-icon rc-icon-tv" title="Телевизор"></i><i class="rc-icon rc-icon-kids" title="Можно с детьми"></i><i class="rc-icon rc-icon-refrigerator" title="Холодильник"></i><i class="rc-icon rc-icon-stove" title="Кухонная плита"></i><i class="rc-icon rc-icon-microwave" title="СВЧ печь"></i><i class="rc-icon rc-icon-iron" title="Утюг с гладильной доской"></i><i class="rc-icon rc-icon-waterheater" title="Водонагреватель"></i><i class="rc-icon rc-icon-cabletv" title="Кабельное Телевидение"></i><i class="rc-icon rc-icon-romantic" title="Для романтических встреч"></i></div>`)
+    $(".rc-flat_list .rc-flat:eq(0) .rc-flat__more__info__services").html(`<div class="rc-row" style="margin-bottom: 10px;"
+    ><div class="rc-col-sm-12 rc-flat__more__info__services">
+    <div class="rc-row rc-flat__more__info__services__row">
+    <div class="rc-flat__more__info__services__item rc-col-sm-4">
+    <i class="rc-icon rc-icon-washing_machine"></i>
+    <!-- react-text: 105 -->&nbsp;<!-- /react-text -->
+    <!-- react-text: 106 -->Стиральная машина<!-- /react-text -->
+    </div><div class="rc-flat__more__info__services__item rc-col-sm-4">
+    <i class="rc-icon rc-icon-wi_fi"></i><!-- react-text: 109 -->&nbsp;
+    <!-- /react-text --><!-- react-text: 110 -->Интернет Wi-Fi<!-- /react-text -->
+    </div><div class="rc-flat__more__info__services__item rc-col-sm-4"><i class="rc-icon rc-icon-tv"></i><!-- react-text: 113 -->&nbsp;<!-- /react-text --><!-- react-text: 114 -->
+    Телевизор<!-- /react-text --></div></div><div class="rc-row rc-flat__more__info__services__row"><div class="rc-flat__more__info__services__item rc-col-sm-4">
+    <i class="rc-icon rc-icon-kids"></i><!-- react-text: 118 -->&nbsp;<!-- /react-text --><!-- react-text: 119 -->Можно с детьми<!-- /react-text --></div>
+    <div class="rc-flat__more__info__services__item rc-col-sm-4"><i class="rc-icon rc-icon-refrigerator"></i><!-- react-text: 122 -->&nbsp;<!-- /react-text -->
+    <!-- react-text: 123 -->Холодильник<!-- /react-text --></div><div class="rc-flat__more__info__services__item rc-col-sm-4"><i class="rc-icon rc-icon-stove"></i>
+    <!-- react-text: 126 -->&nbsp;<!-- /react-text --><!-- react-text: 127 -->Кухонная плита<!-- /react-text --></div></div>
+    <div class="rc-row rc-flat__more__info__services__row"><div class="rc-flat__more__info__services__item rc-col-sm-4"><i class="rc-icon rc-icon-microwave"></i>
+    <!-- react-text: 131 -->&nbsp;<!-- /react-text --><!-- react-text: 132 -->СВЧ печь<!-- /react-text --></div><div class="rc-flat__more__info__services__item rc-col-sm-4">
+    <i class="rc-icon rc-icon-iron"></i><!-- react-text: 135 -->&nbsp;<!-- /react-text --><!-- react-text: 136 -->Утюг с гладильной доской<!-- /react-text --></div>
+    <div class="rc-flat__more__info__services__item rc-col-sm-4"><i class="rc-icon rc-icon-waterheater"></i><!-- react-text: 139 -->&nbsp;<!-- /react-text -->
+    <!-- react-text: 140 -->Водонагреватель<!-- /react-text --></div></div><div class="rc-row rc-flat__more__info__services__row">
+    <div class="rc-flat__more__info__services__item rc-col-sm-4"><i class="rc-icon rc-icon-cabletv"></i><!-- react-text: 144 -->&nbsp;<!-- /react-text -->
+    <!-- react-text: 145 -->Кабельное Телевидение<!-- /react-text --></div><div class="rc-flat__more__info__services__item rc-col-sm-4"><i class="rc-icon rc-icon-romantic"></i>
+    <!-- react-text: 148 -->&nbsp;<!-- /react-text --><!-- react-text: 149 -->Для романтических встреч<!-- /react-text --></div></div></div></div><div class="rc-row">
+    <div class="rc-col-sm-12 rc-flat__more__info__desc"><p>&nbsp;Center, to Nevsky 15 minutes on foot. Nearby are three metro stations (Vladimirskaya, Dostoevskaya, Zvenigorodskaya), restaurants, shops, cafes, market, shopping centers, oceanarium. Nevsky is 1 km away. Cozy studio apartment in the historic city center. The apartment is completely ready for a comfortable stay - design repair, there are all necessary furniture and appliances, cable TV, Internet. double bed 160 cm, double sofa bed 160 cm, chest of drawers, wardrobe, TV, dining table, chairs, stools, bedding, kitchen utensils, dishes.<br>Cozy, comfortable, reliable.</p>
+    </div></div><div class="rc-row"><div class="rc-col-sm-12 rc-flat__more__info__map_wrapper"></div></div>`)
+    $(".rc-flat_list .rc-flat:eq(1) .rc-flat__info").html(`<span class="rc-flat__info__adress">St. Petersburg, Socialist 13</span><br><!-- react-text: 70 -->m. Zvenigorodskaya<!-- /react-text --><br><!-- react-text: 72 -->Rooms: <!-- /react-text --><!-- react-text: 73 -->1<!-- /react-text --><br><!-- react-text: 75 -->Sleeps: <!-- /react-text --><!-- react-text: 76 -->2+2<!-- /react-text --><br><span><!-- react-text: 79 -->Floor: <!-- /react-text --><!-- react-text: 80 -->1<!-- /react-text --></span><div class="rc-flat__info__services" style=""><i class="rc-icon rc-icon-washing_machine" title="Стиральная машина"></i><i class="rc-icon rc-icon-wi_fi" title="Интернет Wi-Fi"></i><i class="rc-icon rc-icon-tv" title="Телевизор"></i><i class="rc-icon rc-icon-kids" title="Можно с детьми"></i><i class="rc-icon rc-icon-refrigerator" title="Холодильник"></i><i class="rc-icon rc-icon-stove" title="Кухонная плита"></i><i class="rc-icon rc-icon-microwave" title="СВЧ печь"></i><i class="rc-icon rc-icon-iron" title="Утюг с гладильной доской"></i><i class="rc-icon rc-icon-waterheater" title="Водонагреватель"></i><i class="rc-icon rc-icon-cabletv" title="Кабельное Телевидение"></i><i class="rc-icon rc-icon-romantic" title="Для романтических встреч"></i></div>`)
+    $(".rc-flat_list .rc-flat:eq(1) .rc-flat__more__info__services").html(`<div class="rc-row" style="margin-bottom: 10px;"
+    ><div class="rc-col-sm-12 rc-flat__more__info__services">
+    <div class="rc-row rc-flat__more__info__services__row">
+    <div class="rc-flat__more__info__services__item rc-col-sm-4">
+    <i class="rc-icon rc-icon-washing_machine"></i>
+    <!-- react-text: 105 -->&nbsp;<!-- /react-text -->
+    <!-- react-text: 106 -->Стиральная машина<!-- /react-text -->
+    </div><div class="rc-flat__more__info__services__item rc-col-sm-4">
+    <i class="rc-icon rc-icon-wi_fi"></i><!-- react-text: 109 -->&nbsp;
+    <!-- /react-text --><!-- react-text: 110 -->Интернет Wi-Fi<!-- /react-text -->
+    </div><div class="rc-flat__more__info__services__item rc-col-sm-4"><i class="rc-icon rc-icon-tv"></i><!-- react-text: 113 -->&nbsp;<!-- /react-text --><!-- react-text: 114 -->
+    Телевизор<!-- /react-text --></div></div><div class="rc-row rc-flat__more__info__services__row"><div class="rc-flat__more__info__services__item rc-col-sm-4">
+    <i class="rc-icon rc-icon-kids"></i><!-- react-text: 118 -->&nbsp;<!-- /react-text --><!-- react-text: 119 -->Можно с детьми<!-- /react-text --></div>
+    <div class="rc-flat__more__info__services__item rc-col-sm-4"><i class="rc-icon rc-icon-refrigerator"></i><!-- react-text: 122 -->&nbsp;<!-- /react-text -->
+    <!-- react-text: 123 -->Холодильник<!-- /react-text --></div><div class="rc-flat__more__info__services__item rc-col-sm-4"><i class="rc-icon rc-icon-stove"></i>
+    <!-- react-text: 126 -->&nbsp;<!-- /react-text --><!-- react-text: 127 -->Кухонная плита<!-- /react-text --></div></div>
+    <div class="rc-row rc-flat__more__info__services__row"><div class="rc-flat__more__info__services__item rc-col-sm-4"><i class="rc-icon rc-icon-microwave"></i>
+    <!-- react-text: 131 -->&nbsp;<!-- /react-text --><!-- react-text: 132 -->СВЧ печь<!-- /react-text --></div><div class="rc-flat__more__info__services__item rc-col-sm-4">
+    <i class="rc-icon rc-icon-iron"></i><!-- react-text: 135 -->&nbsp;<!-- /react-text --><!-- react-text: 136 -->Утюг с гладильной доской<!-- /react-text --></div>
+    <div class="rc-flat__more__info__services__item rc-col-sm-4"><i class="rc-icon rc-icon-waterheater"></i><!-- react-text: 139 -->&nbsp;<!-- /react-text -->
+    <!-- react-text: 140 -->Водонагреватель<!-- /react-text --></div></div><div class="rc-row rc-flat__more__info__services__row">
+    <div class="rc-flat__more__info__services__item rc-col-sm-4"><i class="rc-icon rc-icon-cabletv"></i><!-- react-text: 144 -->&nbsp;<!-- /react-text -->
+    <!-- react-text: 145 -->Кабельное Телевидение<!-- /react-text --></div><div class="rc-flat__more__info__services__item rc-col-sm-4"><i class="rc-icon rc-icon-romantic"></i>
+    <!-- react-text: 148 -->&nbsp;<!-- /react-text --><!-- react-text: 149 -->Для романтических встреч<!-- /react-text --></div></div></div></div><div class="rc-row">
+    <div class="rc-col-sm-12 rc-flat__more__info__desc"><p>&nbsp;Center, to Nevsky 15 minutes on foot. Nearby are three metro stations (Vladimirskaya, Dostoevskaya, Zvenigorodskaya), restaurants, shops, cafes, market, shopping centers, oceanarium. Nevsky is 1 km away. Cozy studio apartment in the historic city center. The apartment is completely ready for a comfortable stay - design repair, there are all necessary furniture and appliances, cable TV, Internet. double bed 160 cm, single bed 90 cm, chest of drawers, wardrobe, TV, dining table, chairs, stools, bedding, kitchen utensils, dishes.<br>Cozy, comfortable, reliable.</p>
+    </div></div><div class="rc-row"><div class="rc-col-sm-12 rc-flat__more__info__map_wrapper"></div></div>`)
+    
   }
 }
