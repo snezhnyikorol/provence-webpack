@@ -386,9 +386,10 @@ function translateWidget(to) {
   }
 }
 
-$('.rc-flat__book__btn').bind('click', function () {
+$('.rc-flat__book__btn').addEventListener('click', function (event) {
   $('.rc-modal-title').text('booking')
-}, false)
+  event.preventDefault()
+})
 
 // var myElement = document.getElementById('rc-bookings-widget-root');
 
