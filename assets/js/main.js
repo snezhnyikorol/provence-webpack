@@ -435,11 +435,44 @@ let bodyClass = new MutationObserver(function (mutations) {
 });
 
 bodyClass.observe(document.body, { attributes: true })
-
+let price_flat = 0
 function translateModal(lang) {
+
   if (lang == 'eng') {
+    rus['rc-modal-title'] = $(".rc-modal-title").text()
     $(".rc-modal-title").text('Booking')
+    rus['rc-booking_modal__flat_info__img + div'] = $('.rc-booking_modal__flat_info__img + div').html()
+    $('.rc-booking_modal__flat_info__img + div').html(`St. Petersburg, Socialist 13<br>metro Zvenigorodskaya<br>Rooms: 1<br>Sleeps: 2 + 2`)
+    rus['label[for=rc-checkin]:eq(0)'] = $(".rc-booking_form__dates label[for=rc-checkin]:eq(0)").text()
+    $(".rc-booking_form__dates label[for=rc-checkin]:eq(0)").text('Сheck in')
+    rus['label[for=rc-checkin]:eq(1)'] = $(".rc-booking_form__dates label[for=rc-checkin]:eq(1").text()
+    $(".rc-booking_form__dates label[for=rc-checkin]:eq(1)").text('Сheck out')
+    rus['rc-booking_form__price div:eq(0)'] = $('.rc-booking_form__price div:eq(0)').html()
+    $('.rc-booking_form__price div:eq(0)').html(`Amount for 1 night<br>${rus['rc-booking_form__price div:eq(0)'].slice(rus['rc-booking_form__price div:eq(0)'].indexOf('<br>')+ 4)}`)
+    rus['rc-booking_form__price div:eq(1)'] = $('.rc-booking_form__price div:eq(1)').html()
+    $('.rc-booking_form__price div:eq(1)').html(`Prepayment<br>${rus['rc-booking_form__price div:eq(1)'].slice(rus['rc-booking_form__price div:eq(1)'].indexOf('<br>')+ 4)}`)
+    rus['[for=name]'] = $('[for=name]').text()
+    $('[for=name]').text('Name*')
+    rus['[for=guests]'] = $('[for=guests]').text()
+    $('[for=guests]').text('Guests')
+    rus['[for=phone]'] = $('[for=phone]').text()
+    $('[for=phone]').text('Phone*')
+    rus['[for=comment]'] = $('[for=comment]').text()
+    $('[for=comment]').text('Your wishes')
+    rus['rc-booking_form__pay_info div'] = $('.rc-booking_form__pay_info div').text() 
+    price_flat = rus['rc-booking_form__pay_info div'].match(/[-]?[0-9]+(.[0-9]+)?/)[0]
+    $('.rc-booking_form__pay_info div').text(`The reservation amount is ${price_flat} rubles. In order to book an apartment you need to make an advance payment of ${price_flat} rubles. You will pay the remaining amount upon check-in.`)
   } else if (lang == 'rus') {
-    
+    $(".rc-modal-title").text(rus['rc-modal-title'])
+    $('.rc-booking_modal__flat_info__img + div').html(rus['rc-booking_modal__flat_info__img + div'])
+    $(".rc-booking_form__dates label[for=rc-checkin]:eq(0)").text(rus['label[for=rc-checkin]:eq(0)'])
+    $(".rc-booking_form__dates label[for=rc-checkin]:eq(1").text(rus['label[for=rc-checkin]:eq(1)'])
+    $('.rc-booking_form__price div:eq(0)').html(rus['rc-booking_form__price div:eq(0)'])
+    $('.rc-booking_form__price div:eq(1)').html(rus['rc-booking_form__price div:eq(1)'])
+    $('[for=name]').text(rus['[for=name]'])
+    $('[for=guests]').text(rus['[for=guests]'])
+    $('[for=phone]').text(rus['[for=phone]'])
+    $('[for=comment]').text(rus['[for=comment]'])
+    $('.rc-booking_form__pay_info div').text(rus['rc-booking_form__pay_info div']) 
   }
 }
