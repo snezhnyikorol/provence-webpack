@@ -402,9 +402,6 @@ function translateWidget(to) {
     <!-- react-text: 148 -->&nbsp;<!-- /react-text --><!-- react-text: 149 -->For romantic meetings<!-- /react-text --></div></div></div></div><div class="rc-row">
     <div class="rc-col-sm-12 rc-flat__more__info__desc"><p>&nbsp;Center, to Nevsky 15 minutes on foot. Nearby are three metro stations (Vladimirskaya, Dostoevskaya, Zvenigorodskaya), restaurants, shops, cafes, market, shopping centers, oceanarium. Nevsky is 1 km away. Cozy studio apartment in the historic city center. The apartment is completely ready for a comfortable stay - design repair, there are all necessary furniture and appliances, cable TV, Internet. double bed 160 cm, single bed 90 cm, chest of drawers, wardrobe, TV, dining table, chairs, stools, bedding, kitchen utensils, dishes.<br>Cozy, comfortable, reliable.</p>
     </div></div><div class="rc-row"><div class="rc-col-sm-12 rc-flat__more__info__map_wrapper"></div></div>`)
-
-
-    $(".rc-modal-title").text('Booking')
   } else if (to == 'rus') {
     $('.eabr-header-title').text(rus['eabr-header-title'])
     $("[for=rc-checkin]").html(rus['checkin'])
@@ -423,6 +420,26 @@ function translateWidget(to) {
   }
 }
 
-$('#rc-bookings-widget-root').on('show.bs.modal', function (e) {
-  console.log('wwhhhaatt')
-})
+let bodyClass = new MutationObserver(function (mutations) {
+  let list = document.body.classList
+  console.log(document.body.classList.contains('modal-open'))
+  console.log(document.body.classList.contains('rc-modal-open'))
+  if (list.contains('modal-open')) {
+    //блокировать скролл
+  } else {
+    //отменять
+  }
+  if (list.contains('rc-modal-open')) {
+    translateModal(lang)
+  }
+});
+
+bodyClass.observe(document.body, { attributes: true })
+
+function translateModal(lang) {
+  if (lang == 'eng') {
+    $(".rc-modal-title").text('Booking')
+  } else if (lang == 'rus') {
+    
+  }
+}
