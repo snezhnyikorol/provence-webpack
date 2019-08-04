@@ -408,6 +408,6 @@ console.log(document.getElementsByClassName('rc-flat__book__btn')[0])
 //    // this function will run each time the content of the DIV changes
 
 // }
-document.getElementById('rc-bookings-widget-root').addEventListener('DOMContentLoaded', function (event) {
+document.getElementById('rc-bookings-widget-root').addEventListener('DOMSubtreeModified', function (event) {
   console.log(document.getElementsByClassName('rc-bookings-widget-root'))
 })
