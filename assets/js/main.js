@@ -410,7 +410,7 @@ function translateWidget(to) {
     $('.rc-search_form__item__guests__control option:eq(8)').text(rus['option']);
     $(".rc-search_form__search_btn").text(rus['rc-search_form__search_btn'])
     $("rc-text-center").text(rus['rc-text-center'] )
-    $(".rc-flat__price__cur").text(rus['rc-flat__price__cur'])
+    $(".rc-flat__price__cur").text('руб. в сутки')
     $(".rc-flat__more__btn").text('Подробнее')
     $(".rc-flat__book__btn").text('Забронировать')
     $(".rc-flat_list .rc-flat:eq(0) .rc-flat__info").html(rus['rc-flat__info1'])
