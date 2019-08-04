@@ -386,7 +386,7 @@ function translateWidget(to) {
   }
 }
 
-$('.rc-flat__book__btn').addEventListener('click', function (event) {
+document.getElementsByClassName('rc-flat__book__btn')[0].addEventListener('click', function (event) {
   $('.rc-modal-title').text('booking')
   event.preventDefault()
 })
