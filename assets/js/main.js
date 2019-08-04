@@ -422,11 +422,6 @@ function translateWidget(to) {
 
 let bodyClass = new MutationObserver(function (mutations) {
   let list = document.body.classList
-  if (list.contains('modal-open')) {
-    //блокировать скролл
-  } else {
-    //отменять
-  }
   if (list.contains('rc-modal-open')) {
     translateModal(lang)
   }
@@ -437,6 +432,7 @@ let price_flat = 0
 function translateModal(lang) {
 
   if (lang == 'eng') {
+    rus['rc-booking_form__pay_info div'] = $('.rc-booking_form__pay_info div').text() 
     price_flat = rus['rc-booking_form__pay_info div'].match(/[-]?[0-9]+(.[0-9]+)?/)[0]
     rus['rc-modal-title'] = $(".rc-modal-title").text()
     $(".rc-modal-title").text('Booking')
@@ -458,7 +454,7 @@ function translateModal(lang) {
     $('[for=phone]').text('Phone*')
     rus['[for=comment]'] = $('[for=comment]').text()
     $('[for=comment]').text('Your wishes')
-    rus['rc-booking_form__pay_info div'] = $('.rc-booking_form__pay_info div').text() 
+
     $('.rc-booking_form__pay_info div').text(`The reservation amount is ${price_flat} rubles. In order to book an apartment you need to make an advance payment of ${price_flat} rubles. You will pay the remaining amount upon check-in.`)
     rus['rc-checkbox'] = $('.rc-checkbox').html()
     $('.rc-checkbox').html(`<div class="rc-checkbox" style="margin-bottom: 0px;"><label><input type="checkbox" value="false">I agree to the terms of the user agreement</label></div>`)
