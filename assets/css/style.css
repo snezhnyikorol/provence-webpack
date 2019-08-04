@@ -706,6 +706,9 @@ footer a, footer p {
 
 	.logo_text {
 		visibility: hidden;
+		padding: 0;
+		margin: 0;
+		width: 0;
 	}
 
 	.tel {
@@ -974,9 +977,6 @@ footer a, footer p {
 		margin-top: 110px;
 	}
 
-	.lang_container {
-		display: none!important;
-	}
 
 	nav .row {
 		display: flex;
