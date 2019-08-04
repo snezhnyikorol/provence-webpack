@@ -411,7 +411,6 @@ console.log(document.getElementsByClassName('rc-flat__book__btn')[0])
 document.getElementById('rc-bookings-widget-root').addEventListener('DOMSubtreeModified', function (event) {
   document.getElementsByClassName('rc-flat__book__btn')[0].addEventListener('click', function(event) {
     $('.rc-modal-title').text('booking')
-    comsole.log('jquery')
     event.preventDefault()
   })
 })
