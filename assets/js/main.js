@@ -446,7 +446,7 @@ function translateWidget(to) {
 let bodyClass = new MutationObserver(function (mutations) {
   let list = document.body.classList
   if (list.contains('rc-modal-open')) {
-    setTimeout(function(){if (lang='eng'){translateModal(lang)}}, 1000)
+    setTimeout(function(){if (lang=='eng'){translateModal(lang)}}, 1000)
   }
 });
 
