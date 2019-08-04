@@ -407,7 +407,7 @@ function translateWidget(to) {
       rus['more_1'] =  $('.rc-flat__more__info', first).html()
       rus['info_2'] =  $('.rc-flat__info', second).html()
       rus['more_2'] =  $('.rc-flat__more__info', second).html()
-      
+
       $('.rc-flat__info', first).html(info_1)
 
       $('.rc-flat__more__info', first).html(more_1)
@@ -425,9 +425,6 @@ function translateWidget(to) {
       $('.rc-flat__info', second).html(info_1)
       $('.rc-flat__more__info', second).html(more_1)
     }
-    rus['rc-flat__more__info1'] = $(".rc-flat_list .rc-flat:eq(0) .rc-flat__more__info").html()
-    rus['rc-flat__info2'] = $(".rc-flat_list .rc-flat:eq(1) .rc-flat__info").html()
-    rus['rc-flat__more__info2'] = $(".rc-flat_list .rc-flat:eq(1) .rc-flat__more__info").html()
   } else if (to == 'rus') {
     $('.rc-flat__info', first).html(rus['info_1'])
     $('.rc-flat__more__info', first).html(rus['more_1'])
@@ -443,10 +440,6 @@ function translateWidget(to) {
     $(".rc-flat__price__cur").text('руб. в сутки')
     $(".rc-flat__more__btn").text('Подробнее')
     $(".rc-flat__book__btn").text('Забронировать')
-    $(".rc-flat_list .rc-flat:eq(0) .rc-flat__info").html(rus['rc-flat__info1'])
-    $(".rc-flat_list .rc-flat:eq(0) .rc-flat__more__info").html(rus['rc-flat__more__info1'])
-    $(".rc-flat_list .rc-flat:eq(1) .rc-flat__info").html(rus['rc-flat__info2'])
-    $(".rc-flat_list .rc-flat:eq(1) .rc-flat__more__info").html(rus['rc-flat__more__info2'])
   }
 }
 
