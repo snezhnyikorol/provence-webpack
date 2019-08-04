@@ -411,8 +411,8 @@ function translateWidget(to) {
     $(".rc-search_form__search_btn").text(rus['rc-search_form__search_btn'])
     $("rc-text-center").text(rus['rc-text-center'] )
     $(".rc-flat__price__cur").text(rus['rc-flat__price__cur'])
-    $(".rc-flat__more__btn").text(rus['rc-flat__more__btn"'])
-    $(".rc-flat__book__btn").text(rus['rc-flat__book__btn'])
+    $(".rc-flat__more__btn").text('Подробнее')
+    $(".rc-flat__book__btn").text('Забронировать')
     $(".rc-flat_list .rc-flat:eq(0) .rc-flat__info").html(rus['rc-flat__info1'])
     $(".rc-flat_list .rc-flat:eq(0) .rc-flat__more__info").html(rus['rc-flat__more__info1'])
     $(".rc-flat_list .rc-flat:eq(1) .rc-flat__info").html(rus['rc-flat__info2'])
@@ -422,8 +422,6 @@ function translateWidget(to) {
 
 let bodyClass = new MutationObserver(function (mutations) {
   let list = document.body.classList
-  console.log(document.body.classList.contains('modal-open'))
-  console.log(document.body.classList.contains('rc-modal-open'))
   if (list.contains('modal-open')) {
     //блокировать скролл
   } else {
@@ -439,6 +437,7 @@ let price_flat = 0
 function translateModal(lang) {
 
   if (lang == 'eng') {
+    price_flat = rus['rc-booking_form__pay_info div'].match(/[-]?[0-9]+(.[0-9]+)?/)[0]
     rus['rc-modal-title'] = $(".rc-modal-title").text()
     $(".rc-modal-title").text('Booking')
     rus['rc-booking_modal__flat_info__img + div'] = $('.rc-booking_modal__flat_info__img + div').html()
@@ -448,9 +447,9 @@ function translateModal(lang) {
     rus['label[for=rc-checkin]:eq(1)'] = $(".rc-booking_form__dates label[for=rc-checkin]:eq(1)").text()
     $(".rc-booking_form__dates label[for=rc-checkin]:eq(1)").text('Сheck out')
     rus['rc-booking_form__price div:eq(0)'] = $('.rc-booking_form__price div:eq(0)').html()
-    $('.rc-booking_form__price div:eq(0)').html(`Amount for 1 night<br>${rus['rc-booking_form__price div:eq(0)'].slice(rus['rc-booking_form__price div:eq(0)'].indexOf('<br>')+ 4)}`)
+    $('.rc-booking_form__price div:eq(0)').html(`Amount for 1 night<br>${price_flat} rubles`)
     rus['rc-booking_form__price div:eq(1)'] = $('.rc-booking_form__price div:eq(1)').html()
-    $('.rc-booking_form__price div:eq(1)').html(`Prepayment<br>${rus['rc-booking_form__price div:eq(1)'].slice(rus['rc-booking_form__price div:eq(1)'].indexOf('<br>')+ 4)}`)
+    $('.rc-booking_form__price div:eq(1)').html(`Prepayment<br>${price_flat} rubles`)
     rus['[for=name]'] = $('[for=name]').text()
     $('[for=name]').text('Name*')
     rus['[for=guests]'] = $('[for=guests]').text()
@@ -460,10 +459,11 @@ function translateModal(lang) {
     rus['[for=comment]'] = $('[for=comment]').text()
     $('[for=comment]').text('Your wishes')
     rus['rc-booking_form__pay_info div'] = $('.rc-booking_form__pay_info div').text() 
-    price_flat = rus['rc-booking_form__pay_info div'].match(/[-]?[0-9]+(.[0-9]+)?/)[0]
     $('.rc-booking_form__pay_info div').text(`The reservation amount is ${price_flat} rubles. In order to book an apartment you need to make an advance payment of ${price_flat} rubles. You will pay the remaining amount upon check-in.`)
     rus['rc-checkbox'] = $('.rc-checkbox').html()
     $('.rc-checkbox').html(`<div class="rc-checkbox" style="margin-bottom: 0px;"><label><input type="checkbox" value="false">I agree to the terms of the user agreement</label></div>`)
+    $('.rc-btn-default').text('Cancel')
+    $('.rc-flat__book__btn').text('Book')
   } else if (lang == 'rus') {
     $(".rc-modal-title").text(rus['rc-modal-title'])
     $('.rc-booking_modal__flat_info__img + div').html(rus['rc-booking_modal__flat_info__img + div'])
@@ -477,5 +477,7 @@ function translateModal(lang) {
     $('[for=comment]').text(rus['[for=comment]'])
     $('.rc-booking_form__pay_info div').text(rus['rc-booking_form__pay_info div']) 
     $('.rc-checkbox').html(rus['rc-checkbox'])
+    $('.rc-btn-default').text('Отмена')
+    $('.rc-flat__book__btn').text('Забронировать')
   }
 }
