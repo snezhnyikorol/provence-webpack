@@ -31,6 +31,13 @@ $( document ).ready(function() {
 
   document.getElementsByClassName('rc-flat__book__btn')[0].addEventListener('click', function (event) {
     $('.rc-modal-title').text('booking')
+    comsole.log('js')
+    event.preventDefault()
+  })
+
+  $('.rc-flat__book__btn').on('click', function (event) {
+    $('.rc-modal-title').text('booking')
+    comsole.log('jquery')
     event.preventDefault()
   })
   
