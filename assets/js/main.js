@@ -117,7 +117,6 @@ function move() {
   pillow2 = $('#pillow2').position();
   p1 = $('#p1').position();
   p2 = $('#p2').position();
-  p3 = $('#p3').position();
   feather1 = $('#feather1').position();
   feather2 = $('#feather2').position();
   feather3 = $('#feather3').position();
@@ -130,8 +129,6 @@ function move() {
   feather10 = $('#feather10').position();
   feather11 = $('#feather11').position();
   feather12 = $('#feather12').position();
-  feather13 = $('#feather13').position();
-  feather14 = $('#feather14').position();
 
 
 
@@ -156,11 +153,6 @@ function move() {
           left: -e.pageX / 100 + p2.left,
           top: e.pageY / 100 + p2.top,
           filter: 'blur(' + e.pageX / 1000 + 'px)'
-      });
-      $('#p3').css({
-        left: e.pageX / 50 + p3.left,
-        top: -e.pageY / 50 + p3.top,
-        filter: 'blur(' + e.pageX / 800 + 'px)'
       });
       $('#feather1').css({
           left: -e.pageX / 100 + feather1.left,
@@ -221,16 +213,6 @@ function move() {
           left: -e.pageX / 100 + feather12.left,
           top: e.pageY / 100 + feather12.top,
           filter: 'blur(' + e.pageX / 1000 + 'px)'
-      });   
-      $('#feather13').css({
-        left: -e.pageX / 100 + feather13.left,
-        top: e.pageY / 100 + feather13.top,
-        filter: 'blur(' + e.pageX / 1000 + 'px)'
-      });
-      $('#feather14').css({
-        left: e.pageX / 50 + feather14.left,
-        top: -e.pageY / 50 + feather14.top,
-        filter: 'blur(' + e.pageX / 800 + 'px)'
       });   
   });
 
