@@ -445,7 +445,7 @@ function translateModal(lang) {
     $('.rc-booking_modal__flat_info__img + div').html(`St. Petersburg, Socialist 13<br>metro Zvenigorodskaya<br>Rooms: 1<br>Sleeps: 2 + 2`)
     rus['label[for=rc-checkin]:eq(0)'] = $(".rc-booking_form__dates label[for=rc-checkin]:eq(0)").text()
     $(".rc-booking_form__dates label[for=rc-checkin]:eq(0)").text('Сheck in')
-    rus['label[for=rc-checkin]:eq(1)'] = $(".rc-booking_form__dates label[for=rc-checkin]:eq(1").text()
+    rus['label[for=rc-checkin]:eq(1)'] = $(".rc-booking_form__dates label[for=rc-checkin]:eq(1)").text()
     $(".rc-booking_form__dates label[for=rc-checkin]:eq(1)").text('Сheck out')
     rus['rc-booking_form__price div:eq(0)'] = $('.rc-booking_form__price div:eq(0)').html()
     $('.rc-booking_form__price div:eq(0)').html(`Amount for 1 night<br>${rus['rc-booking_form__price div:eq(0)'].slice(rus['rc-booking_form__price div:eq(0)'].indexOf('<br>')+ 4)}`)
@@ -462,6 +462,8 @@ function translateModal(lang) {
     rus['rc-booking_form__pay_info div'] = $('.rc-booking_form__pay_info div').text() 
     price_flat = rus['rc-booking_form__pay_info div'].match(/[-]?[0-9]+(.[0-9]+)?/)[0]
     $('.rc-booking_form__pay_info div').text(`The reservation amount is ${price_flat} rubles. In order to book an apartment you need to make an advance payment of ${price_flat} rubles. You will pay the remaining amount upon check-in.`)
+    rus['rc-checkbox'] = $('.rc-checkbox').html()
+    $('.rc-checkbox').html(`<div class="rc-checkbox" style="margin-bottom: 0px;"><label><input type="checkbox" value="false">I agree to the terms of the user agreement</label></div>`)
   } else if (lang == 'rus') {
     $(".rc-modal-title").text(rus['rc-modal-title'])
     $('.rc-booking_modal__flat_info__img + div').html(rus['rc-booking_modal__flat_info__img + div'])
@@ -474,5 +476,6 @@ function translateModal(lang) {
     $('[for=phone]').text(rus['[for=phone]'])
     $('[for=comment]').text(rus['[for=comment]'])
     $('.rc-booking_form__pay_info div').text(rus['rc-booking_form__pay_info div']) 
+    $('.rc-checkbox').html(rus['rc-checkbox'])
   }
 }
