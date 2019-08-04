@@ -413,4 +413,5 @@ document.getElementById('rc-bookings-widget-root').addEventListener('DOMSubtreeM
     $('.rc-modal-title').text('booking')
     comsole.log('jquery')
     event.preventDefault()
-  }))
+  })
+})
