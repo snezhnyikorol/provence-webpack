@@ -323,6 +323,8 @@ function setCaretPosition(elemId, caretPos) {
 }
 
 function translateWidget(to) {
+  let first = $('.rc-flat').eq(0)
+  let second = $('.rc-flat').eq(1)
   if (to == 'eng') {
 
     rus['eabr-header-title'] = $('.eabr-header-title').text()
@@ -345,8 +347,7 @@ function translateWidget(to) {
     $(".rc-flat__more__btn").text('More')
     rus['rc-flat__book__btn'] = $(".rc-flat__book__btn").text()
     $(".rc-flat__book__btn").text('Book')
-    let first = $('.rc-flat').eq(0)
-    let second = $('.rc-flat').eq(1)
+
     let info_1 = `<span class="rc-flat__info__adress">St. Petersburg, Socialist 13</span><br><!-- react-text: 70 -->m. Zvenigorodskaya<!-- /react-text --><br><!-- react-text: 72 -->Rooms: <!-- /react-text --><!-- react-text: 73 -->1<!-- /react-text --><br><!-- react-text: 75 -->Sleeps: <!-- /react-text --><!-- react-text: 76 -->2+1<!-- /react-text --><br><span><!-- react-text: 79 -->Floor: <!-- /react-text --><!-- react-text: 80 -->1<!-- /react-text --></span><div class="rc-flat__info__services" style=""><i class="rc-icon rc-icon-washing_machine" title="Washer"></i><i class="rc-icon rc-icon-wi_fi" title="Wi-Fi Internet"></i><i class="rc-icon rc-icon-tv" title="TV"></i><i class="rc-icon rc-icon-kids" title="Can children"></i><i class="rc-icon rc-icon-refrigerator" title="Fridge"></i><i class="rc-icon rc-icon-stove" title="Kitchen stove"></i><i class="rc-icon rc-icon-microwave" title="Microwave oven"></i><i class="rc-icon rc-icon-iron" title="Iron and ironing board"></i><i class="rc-icon rc-icon-waterheater" title="Water heater"></i><i class="rc-icon rc-icon-cabletv" title="Cable TV"></i><i class="rc-icon rc-icon-romantic" title="For romantic meetings"></i></div>`
     let info_2 = `<span class="rc-flat__info__adress">St. Petersburg, Socialist 13</span><br><!-- react-text: 70 -->m. Zvenigorodskaya<!-- /react-text --><br><!-- react-text: 72 -->Rooms: <!-- /react-text --><!-- react-text: 73 -->1<!-- /react-text --><br><!-- react-text: 75 -->Sleeps: <!-- /react-text --><!-- react-text: 76 -->2+2<!-- /react-text --><br><span><!-- react-text: 79 -->Floor: <!-- /react-text --><!-- react-text: 80 -->1<!-- /react-text --></span><div class="rc-flat__info__services" style=""><i class="rc-icon rc-icon-washing_machine" title="Washer"></i><i class="rc-icon rc-icon-wi_fi" title="Wi-Fi Internet"></i><i class="rc-icon rc-icon-tv" title="TV"></i><i class="rc-icon rc-icon-kids" title="Can children"></i><i class="rc-icon rc-icon-refrigerator" title="Fridge"></i><i class="rc-icon rc-icon-stove" title="Kitchen stove"></i><i class="rc-icon rc-icon-microwave" title="Microwave oven"></i><i class="rc-icon rc-icon-iron" title="Iron and ironing board"></i><i class="rc-icon rc-icon-waterheater" title="Water heater"></i><i class="rc-icon rc-icon-cabletv" title="Cable TV"></i><i class="rc-icon rc-icon-romantic" title="For romantic meetings"></i></div>`
     let more_1 = `<div class="rc-row" style="margin-bottom: 10px;"
@@ -411,6 +412,10 @@ function translateWidget(to) {
       rus['more_2'] =  $('.rc-flat__more__info', second).html()
       $('.rc-flat__more__info', second).html(more_2)
     } else if ($('.rc-flat__info', first).text().slice($('.rc-flat__info', first).text().indexOf('Спальных мест')+17,$('.rc-flat__info', first).text().indexOf('Спальных мест')+18) == '2') {
+      rus['info_1'] =  $('.rc-flat__info', first).html()
+      rus['more_1'] =  $('.rc-flat__more__info', first).html()
+      rus['info_2'] =  $('.rc-flat__info', second).html()
+      rus['more_2'] =  $('.rc-flat__more__info', second).html()
       $('.rc-flat__info', first).html(info_2)
       $('.rc-flat__more__info', first).html(more_2)
       $('.rc-flat__info', second).html(info_1)
@@ -420,6 +425,10 @@ function translateWidget(to) {
     rus['rc-flat__info2'] = $(".rc-flat_list .rc-flat:eq(1) .rc-flat__info").html()
     rus['rc-flat__more__info2'] = $(".rc-flat_list .rc-flat:eq(1) .rc-flat__more__info").html()
   } else if (to == 'rus') {
+    $('.rc-flat__info', first).html(rus['info_1'])
+    $('.rc-flat__more__info', first).html(rus['more_1'])
+    $('.rc-flat__info', second).html(rus['info_2'])
+    $('.rc-flat__more__info', second).html(rus['more_2'])
     $('.eabr-header-title').text(rus['eabr-header-title'])
     $("[for=rc-checkin]").html(rus['checkin'])
     $("[for=rc-checkout]").html(rus['checkout'])
