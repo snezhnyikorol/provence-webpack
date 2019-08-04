@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(window).on('load', function () {
   var $preloader = $('.preloader_container')
   $preloader.delay(500).fadeOut('slow');
 })
@@ -321,19 +321,29 @@ function setCaretPosition(elemId, caretPos) {
       }
   }
 }
-let rus_container
+
 function translateWidget(to) {
   if (to == 'eng') {
-    rus_container = $('.rc-container').html()
+
+    rus['eabr-header-title'] = $('.eabr-header-title').text()
     $('.eabr-header-title').text('What do those who have visited us say')
+    rus['checkin'] = $("[for=rc-checkin]").html()
     $("[for=rc-checkin]").html('Сheck in&nbsp;')
+    rus['checkout'] = $("[for=rc-checkout]").html()
     $("[for=rc-checkout]").html('Сheck out&nbsp;')
+    rus['guests'] = $("[for=guests]").html()
     $("[for=guests]").html('Guests&nbsp;')
+    rus['option'] = $('.rc-search_form__item__guests__control option:eq(8)').text();
     $('.rc-search_form__item__guests__control option:eq(8)').text('more than 9');
+    rus['rc-search_form__search_btn'] = $(".rc-search_form__search_btn").text()
     $(".rc-search_form__search_btn").text('Search')
+    rus['rc-text-center'] =  $(".rc-text-center").text()
     $("rc-text-center").text('Loading...')
+    rus['rc-flat__price__cur'] = $(".rc-flat__price__cur").text()
     $(".rc-flat__price__cur").text('RUB per day')
+    rus['rc-flat__more__btn"'] = $(".rc-flat__more__btn").text()
     $(".rc-flat__more__btn").text('More')
+    rus['rc-flat__book__btn'] = $(".rc-flat__book__btn").text()
     $(".rc-flat__book__btn").text('Book')
     let first = $('.rc-flat').eq(0)
     let second = $('.rc-flat').eq(1)
@@ -392,9 +402,13 @@ function translateWidget(to) {
     <div class="rc-col-sm-12 rc-flat__more__info__desc"><p>&nbsp;Center, to Nevsky 15 minutes on foot. Nearby are three metro stations (Vladimirskaya, Dostoevskaya, Zvenigorodskaya), restaurants, shops, cafes, market, shopping centers, oceanarium. Nevsky is 1 km away. Cozy studio apartment in the historic city center. The apartment is completely ready for a comfortable stay - design repair, there are all necessary furniture and appliances, cable TV, Internet. double bed 160 cm, double sofa bed 160 cm, chest of drawers, wardrobe, TV, dining table, chairs, stools, bedding, kitchen utensils, dishes.<br>Cozy, comfortable, reliable.</p>
     </div></div><div class="rc-row"><div class="rc-col-sm-12 rc-flat__more__info__map_wrapper"></div></div>`
     if ($('.rc-flat__info', first).text().slice($('.rc-flat__info', first).text().indexOf('Спальных мест')+17,$('.rc-flat__info', first).text().indexOf('Спальных мест')+18) == '1') {
+      rus['info_1'] =  $('.rc-flat__info', first).html()
       $('.rc-flat__info', first).html(info_1)
+      rus['more_1'] =  $('.rc-flat__more__info', first).html()
       $('.rc-flat__more__info', first).html(more_1)
+      rus['info_2'] =  $('.rc-flat__info', second).html()
       $('.rc-flat__info', second).html(info_2)
+      rus['more_2'] =  $('.rc-flat__more__info', second).html()
       $('.rc-flat__more__info', second).html(more_2)
     } else if ($('.rc-flat__info', first).text().slice($('.rc-flat__info', first).text().indexOf('Спальных мест')+17,$('.rc-flat__info', first).text().indexOf('Спальных мест')+18) == '2') {
       $('.rc-flat__info', first).html(info_2)
@@ -402,8 +416,24 @@ function translateWidget(to) {
       $('.rc-flat__info', second).html(info_1)
       $('.rc-flat__more__info', second).html(more_1)
     }
+    rus['rc-flat__more__info1'] = $(".rc-flat_list .rc-flat:eq(0) .rc-flat__more__info").html()
+    rus['rc-flat__info2'] = $(".rc-flat_list .rc-flat:eq(1) .rc-flat__info").html()
+    rus['rc-flat__more__info2'] = $(".rc-flat_list .rc-flat:eq(1) .rc-flat__more__info").html()
   } else if (to == 'rus') {
-    $('.rc-container').html(rus_container)
+    $('.eabr-header-title').text(rus['eabr-header-title'])
+    $("[for=rc-checkin]").html(rus['checkin'])
+    $("[for=rc-checkout]").html(rus['checkout'])
+    $("[for=guests]").html(rus['guests'] )
+    $('.rc-search_form__item__guests__control option:eq(8)').text(rus['option']);
+    $(".rc-search_form__search_btn").text(rus['rc-search_form__search_btn'])
+    $("rc-text-center").text(rus['rc-text-center'] )
+    $(".rc-flat__price__cur").text('руб. в сутки')
+    $(".rc-flat__more__btn").text('Подробнее')
+    $(".rc-flat__book__btn").text('Забронировать')
+    $(".rc-flat_list .rc-flat:eq(0) .rc-flat__info").html(rus['rc-flat__info1'])
+    $(".rc-flat_list .rc-flat:eq(0) .rc-flat__more__info").html(rus['rc-flat__more__info1'])
+    $(".rc-flat_list .rc-flat:eq(1) .rc-flat__info").html(rus['rc-flat__info2'])
+    $(".rc-flat_list .rc-flat:eq(1) .rc-flat__more__info").html(rus['rc-flat__more__info2'])
   }
 }
 
@@ -416,13 +446,12 @@ let bodyClass = new MutationObserver(function (mutations) {
 
 bodyClass.observe(document.body, { attributes: true })
 let price_flat = 0
-let rus_modal
 function translateModal(lang) {
 
   if (lang == 'eng') {
-    rus_modal = $('.rc-modal-content').html()
     rus['rc-booking_form__pay_info div'] = $('.rc-booking_form__pay_info div').text() 
     price_flat = rus['rc-booking_form__pay_info div'].match(/[-]?[0-9]+(.[0-9]+)?/)[0]
+    rus['rc-modal-title'] = $(".rc-modal-title").text()
     $(".rc-modal-title").text('Booking')
     if ($('.rc-booking_modal__flat_info__img + div').text().charAt($('.rc-booking_modal__flat_info__img + div').text().length-1) == '1') {
       rus['rc-booking_modal__flat_info__img + div'] = $('.rc-booking_modal__flat_info__img + div').html()
@@ -454,7 +483,6 @@ function translateModal(lang) {
     $('.rc-btn-default').text('Cancel')
     $('.rc-flat__book__btn').text('Book')
   } else if (lang == 'rus') {
-    // $('.rc-modal-content').html(rus_modal)
     $(".rc-modal-title").text(rus['rc-modal-title'])
     $('.rc-booking_modal__flat_info__img + div').html(rus['rc-booking_modal__flat_info__img + div'])
     $(".rc-booking_form__dates label[for=rc-checkin]:eq(0)").text(rus['label[for=rc-checkin]:eq(0)'])
