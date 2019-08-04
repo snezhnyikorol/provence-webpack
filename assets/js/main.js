@@ -28,7 +28,11 @@ $( document ).ready(function() {
       lazyLoad: 'progressive'
     }
   )
-  $('.video_slider').slick()
+
+  document.getElementsByClassName('rc-flat__book__btn')[0].addEventListener('click', function (event) {
+    $('.rc-modal-title').text('booking')
+    event.preventDefault()
+  })
   
   $('.lightbox').slickLightbox(
     {
@@ -388,10 +392,6 @@ function translateWidget(to) {
 
 console.log(document.getElementsByClassName('rc-flat__book__btn')[0])
 
-document.getElementsByClassName('rc-flat__book__btn')[0].addEventListener('click', function (event) {
-  $('.rc-modal-title').text('booking')
-  event.preventDefault()
-})
 
 // var myElement = document.getElementById('rc-bookings-widget-root');
 
