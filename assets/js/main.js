@@ -404,12 +404,16 @@ function translateWidget(to) {
     </div></div><div class="rc-row"><div class="rc-col-sm-12 rc-flat__more__info__map_wrapper"></div></div>`
     if ($('.rc-flat__info', first).text().slice($('.rc-flat__info', first).text().indexOf('Спальных мест')+17,$('.rc-flat__info', first).text().indexOf('Спальных мест')+18) == '1') {
       rus['info_1'] =  $('.rc-flat__info', first).html()
-      $('.rc-flat__info', first).html(info_1)
       rus['more_1'] =  $('.rc-flat__more__info', first).html()
-      $('.rc-flat__more__info', first).html(more_1)
       rus['info_2'] =  $('.rc-flat__info', second).html()
-      $('.rc-flat__info', second).html(info_2)
       rus['more_2'] =  $('.rc-flat__more__info', second).html()
+      
+      $('.rc-flat__info', first).html(info_1)
+
+      $('.rc-flat__more__info', first).html(more_1)
+
+      $('.rc-flat__info', second).html(info_2)
+
       $('.rc-flat__more__info', second).html(more_2)
     } else if ($('.rc-flat__info', first).text().slice($('.rc-flat__info', first).text().indexOf('Спальных мест')+17,$('.rc-flat__info', first).text().indexOf('Спальных мест')+18) == '2') {
       rus['info_1'] =  $('.rc-flat__info', first).html()
