@@ -1,4 +1,4 @@
-$(window).on('load', function () {
+$(document).ready(function () {
   var $preloader = $('.preloader_container')
   $preloader.delay(500).fadeOut('slow');
 })
