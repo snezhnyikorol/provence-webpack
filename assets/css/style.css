@@ -1004,33 +1004,6 @@ footer a, footer p {
 	cursor: not-allowed;
 }
 
-
-
-/* .eabr-cta-component{
-	background-color: rgb(246, 244, 244) !important;
-} */
-
-.eabr-header-title {
-	font-family: "Book Antiqua";
-    font-size: 33px !important;
-    font-weight: 300;
-    font-style: italic;
-    text-align: center;
-}
-
-.eabr-cta-container {
-	background-color: rgba(246, 244, 244, 0) !important;
-}
-
 .widget {
 	background-color: rgb(246, 244, 244);
-}
-
-.eabr-button-component {
-	background-color: #8d836a !important;
-    color: #ffffff !important;
-}
-
-.eabr-booking-rating-value {
-	color: #ffffff !important;
 }

@@ -319,6 +319,8 @@ function setCaretPosition(elemId, caretPos) {
 
 function translateWidget(to) {
   if (to == 'eng') {
+    rus['eabr-header-title'] = $('.eabr-header-title').text()
+    $('.eabr-header-title').text('What do those who have visited us say')
     rus['checkin'] = $("[for=rc-checkin]").html()
     $("[for=rc-checkin]").html('Сheck in&nbsp;')
     rus['checkout'] = $("[for=rc-checkout]").html()
@@ -399,6 +401,7 @@ function translateWidget(to) {
 
     $(".rc-modal-title").text('Booking')
   } else if (to == 'rus') {
+    $('.eabr-header-title').text(rus['eabr-header-title'])
     $("[for=rc-checkin]").html(rus['checkin'])
     $("[for=rc-checkout]").html(rus['checkout'])
     $("[for=guests]").html(rus['guests'] )
@@ -414,3 +417,7 @@ function translateWidget(to) {
     $(".rc-flat_list .rc-flat:eq(1) .rc-flat__more__info").html(rus['rc-flat__more__info2'])
   }
 }
+
+$('#rc-bookings-widget-root').on('show.bs.modal', function (e) {
+  console.log('wwhhhaatt')
+})
