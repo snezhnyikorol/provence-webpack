@@ -1,3 +1,8 @@
+$(window).on('load', function () {
+  var $preloader = $('.preloader_container')
+  $preloader.delay(500).fadeOut('slow');
+})
+
 $(window).scroll(function(){
   var sticky = $('.sticky'),
       scroll = $(window).scrollTop();
