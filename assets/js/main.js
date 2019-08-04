@@ -436,8 +436,13 @@ function translateModal(lang) {
     price_flat = rus['rc-booking_form__pay_info div'].match(/[-]?[0-9]+(.[0-9]+)?/)[0]
     rus['rc-modal-title'] = $(".rc-modal-title").text()
     $(".rc-modal-title").text('Booking')
-    rus['rc-booking_modal__flat_info__img + div'] = $('.rc-booking_modal__flat_info__img + div').html()
-    $('.rc-booking_modal__flat_info__img + div').html(`St. Petersburg, Socialist 13<br>metro Zvenigorodskaya<br>Rooms: 1<br>Sleeps: 2 + 2`)
+    if ($('.rc-booking_modal__flat_info__img + div').text().charAt($('.rc-booking_modal__flat_info__img + div').text().length-1) == '1') {
+      rus['rc-booking_modal__flat_info__img + div'] = $('.rc-booking_modal__flat_info__img + div').html()
+      $('.rc-booking_modal__flat_info__img + div').html(`St. Petersburg, Socialist 13<br>metro Zvenigorodskaya<br>Rooms: 1<br>Sleeps: 2 + 1`)
+    } else {
+      rus['rc-booking_modal__flat_info__img + div'] = $('.rc-booking_modal__flat_info__img + div').html()
+      $('.rc-booking_modal__flat_info__img + div').html(`St. Petersburg, Socialist 13<br>metro Zvenigorodskaya<br>Rooms: 1<br>Sleeps: 2 + 2`)
+    }
     rus['label[for=rc-checkin]:eq(0)'] = $(".rc-booking_form__dates label[for=rc-checkin]:eq(0)").text()
     $(".rc-booking_form__dates label[for=rc-checkin]:eq(0)").text('Сheck in')
     rus['label[for=rc-checkin]:eq(1)'] = $(".rc-booking_form__dates label[for=rc-checkin]:eq(1)").text()
