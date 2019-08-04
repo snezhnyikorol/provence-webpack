@@ -13,8 +13,8 @@ html {
 	width: 100%;
 }
 
-.container {
-	overflow-x: hidden;
+section {
+	overflow: hidden;
 }
 
 .top_slider-container {
