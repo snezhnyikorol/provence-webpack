@@ -13,7 +13,7 @@ html {
 	width: 100%;
 }
 
-section {
+.container {
 	overflow-x: hidden;
 }
 
