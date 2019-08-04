@@ -464,7 +464,7 @@ function translateModal(lang) {
     $(".rc-modal-title").text(rus['rc-modal-title'])
     $('.rc-booking_modal__flat_info__img + div').html(rus['rc-booking_modal__flat_info__img + div'])
     $(".rc-booking_form__dates label[for=rc-checkin]:eq(0)").text(rus['label[for=rc-checkin]:eq(0)'])
-    $(".rc-booking_form__dates label[for=rc-checkin]:eq(1").text(rus['label[for=rc-checkin]:eq(1)'])
+    $(".rc-booking_form__dates label[for=rc-checkin]:eq(1)").text(rus['label[for=rc-checkin]:eq(1)'])
     $('.rc-booking_form__price div:eq(0)').html(rus['rc-booking_form__price div:eq(0)'])
     $('.rc-booking_form__price div:eq(1)').html(rus['rc-booking_form__price div:eq(1)'])
     $('[for=name]').text(rus['[for=name]'])
