@@ -338,7 +338,24 @@ function translateWidget(to) {
     rus['option'] = $('.rc-search_form__item__guests__control option:eq(8)').text();
     $('.rc-search_form__item__guests__control option:eq(8)').text('more than 9');
     rus['rc-search_form__search_btn'] = $(".rc-search_form__search_btn").text()
-    $(".rc-search_form__search_btn").text('Search')
+    translateFlat(lang)
+    $(".rc-search_form__search_btn").text('Search') 
+  }else if (to == 'rus') {
+    $('.eabr-header-title').text(rus['eabr-header-title'])
+    $("[for=rc-checkin]").html(rus['checkin'])
+    $("[for=rc-checkout]").html(rus['checkout'])
+    $("[for=guests]").html(rus['guests'] )
+    $('.rc-search_form__item__guests__control option:eq(8)').text(rus['option']);
+    $(".rc-search_form__search_btn").text(rus['rc-search_form__search_btn'])
+    translateFlat(lang)
+  }
+    
+
+}
+
+function translateFlat(lang) {
+  if (lang == 'eng'){
+  
     rus['rc-text-center'] =  $(".rc-text-center").text()
     $("rc-text-center").text('Loading...')
     rus['rc-flat__price__cur'] = $(".rc-flat__price__cur").text()
@@ -425,17 +442,11 @@ function translateWidget(to) {
       $('.rc-flat__info', second).html(info_1)
       $('.rc-flat__more__info', second).html(more_1)
     }
-  } else if (to == 'rus') {
+  } else if (lang == 'rus') {
     $('.rc-flat__info', first).html(rus['info_1'])
     $('.rc-flat__more__info', first).html(rus['more_1'])
     $('.rc-flat__info', second).html(rus['info_2'])
     $('.rc-flat__more__info', second).html(rus['more_2'])
-    $('.eabr-header-title').text(rus['eabr-header-title'])
-    $("[for=rc-checkin]").html(rus['checkin'])
-    $("[for=rc-checkout]").html(rus['checkout'])
-    $("[for=guests]").html(rus['guests'] )
-    $('.rc-search_form__item__guests__control option:eq(8)').text(rus['option']);
-    $(".rc-search_form__search_btn").text(rus['rc-search_form__search_btn'])
     $("rc-text-center").text(rus['rc-text-center'] )
     $(".rc-flat__price__cur").text('руб. в сутки')
     $(".rc-flat__more__btn").text('Подробнее')
@@ -505,3 +516,7 @@ function translateModal(lang) {
     $('.rc-flat__book__btn').text('Забронировать')
   }
 }
+
+$('body').on('click','.rc-search_form__search_btn', function () {
+  translateFlat(lang)
+})
