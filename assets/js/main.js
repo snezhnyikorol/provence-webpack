@@ -464,11 +464,14 @@ let bodyClass = new MutationObserver(function (mutations) {
 
 bodyClass.observe(document.body, { attributes: true })
 let price_flat = 0
+let prepayment_flat = 0
 function translateModal(lang) {
 
   if (lang == 'eng') {
     rus['rc-booking_form__pay_info div'] = $('.rc-booking_form__pay_info div').text() 
+    rus['rc-booking_form__pay_info .rc-bg-success'] = $('.rc-booking_form__pay_info .rc-bg-success').text()
     price_flat = rus['rc-booking_form__pay_info div'].match(/[-]?[0-9]+(.[0-9]+)?/)[0]
+    prepayment_flat = rus['rc-booking_form__pay_info .rc-bg-success'].match(/[-]?[0-9]+(.[0-9]+)?/)[0]
     rus['rc-modal-title'] = $(".rc-modal-title").text()
     $(".rc-modal-title").text('Booking')
     if ($('.rc-booking_modal__flat_info__img + div').text().charAt($('.rc-booking_modal__flat_info__img + div').text().length-1) == '1') {
@@ -485,7 +488,7 @@ function translateModal(lang) {
     rus['rc-booking_form__price div:eq(0)'] = $('.rc-booking_form__price div:eq(0)').html()
     $('.rc-booking_form__price div:eq(0)').html(`Amount for 1 night<br>${price_flat} rubles`)
     rus['rc-booking_form__price div:eq(1)'] = $('.rc-booking_form__price div:eq(1)').html()
-    $('.rc-booking_form__price div:eq(1)').html(`Prepayment<br>${price_flat} rubles`)
+    $('.rc-booking_form__price div:eq(1)').html(`Prepayment<br>${prepayment_flat} rubles`)
     rus['[for=name]'] = $('[for=name]').text()
     $('[for=name]').text('Name*')
     rus['[for=guests]'] = $('[for=guests]').text()
@@ -495,7 +498,7 @@ function translateModal(lang) {
     rus['[for=comment]'] = $('[for=comment]').text()
     $('[for=comment]').text('Your wishes')
 
-    $('.rc-booking_form__pay_info div').text(`The reservation amount is ${price_flat} rubles. In order to book an apartment you need to make an advance payment of ${price_flat} rubles. You will pay the remaining amount upon check-in.`)
+    $('.rc-booking_form__pay_info div').text(`The reservation amount is ${price_flat} rubles. In order to book an apartment you need to make an advance payment of ${prepayment_flat} rubles. You will pay the remaining amount upon check-in.`)
     rus['rc-checkbox'] = $('.rc-checkbox').html()
     $('.rc-checkbox').html(`<div class="rc-checkbox" style="margin-bottom: 0px;"><label><input type="checkbox" value="false">I agree to the terms of the user agreement</label></div>`)
     $('.rc-btn-default').text('Cancel')
@@ -519,6 +522,6 @@ function translateModal(lang) {
 }
 
 $('body').on('click','.rc-search_form__search_btn', function () {
-  setTimeout(function () {  translateFlat(lang)}, 5000)
+  setTimeout(function () {  translateFlat(lang)}, 3000)
 
 })
