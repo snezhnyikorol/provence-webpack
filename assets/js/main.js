@@ -519,5 +519,6 @@ function translateModal(lang) {
 }
 
 $('body').on('click','.rc-search_form__search_btn', function () {
-  translateFlat(lang)
+  setTimeout(function () {  translateFlat(lang)}, 5000)
+
 })
