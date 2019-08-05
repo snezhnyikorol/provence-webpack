@@ -27,6 +27,7 @@ $( document ).ready(function() {
   $('.top_slider').slick(
     {
       lazyLoad: 'progressive',
+      initialSlide: 12
     }
   )
   $('.photo_slider').slick(

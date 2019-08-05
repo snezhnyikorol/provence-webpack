@@ -1298,3 +1298,7 @@ footer a, footer p {
 .eabr-content-component + div {
 	display: none;
 }
+
+.ytp-title {
+	display: none !important;
+}
