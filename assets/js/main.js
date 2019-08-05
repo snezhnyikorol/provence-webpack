@@ -534,3 +534,18 @@ function vidplay(num) {
      $(button).css({'background-image': "url('assets/img/icons/play.png')"})
   }
 }
+
+let video1 = document.getElementById("video1");
+let video2 = document.getElementById("video2");
+let button1 = document.getElementById("play1");
+let button2 = document.getElementById("play2");
+
+video1.addEventListener('ended', () => {
+  $(button1).css({'opacity': "1"})
+  $(button1).css({'background-image': "url('assets/img/icons/play.png')"})
+})
+
+video2.addEventListener('ended', () => {
+  $(button2).css({'opacity': "1"})
+  $(button2).css({'background-image': "url('assets/img/icons/play.png')"})
+})
