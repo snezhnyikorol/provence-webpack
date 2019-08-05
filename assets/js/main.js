@@ -469,9 +469,8 @@ function translateModal(lang) {
 
   if (lang == 'eng') {
     rus['rc-booking_form__pay_info div'] = $('.rc-booking_form__pay_info div').text() 
-    rus['rc-booking_form__pay_info .rc-bg-success'] = $('.rc-booking_form__pay_info .rc-bg-success').text()
     price_flat = rus['rc-booking_form__pay_info div'].match(/[-]?[0-9]+(.[0-9]+)?/)[0]
-    prepayment_flat = rus['rc-booking_form__pay_info .rc-bg-success'].match(/[-]?[0-9]+(.[0-9]+)?/)[0]
+    prepayment_flat = rus['rc-booking_form__pay_info div'].match(/[-]?[0-9]+(.[0-9]+)?/)[1]
     rus['rc-modal-title'] = $(".rc-modal-title").text()
     $(".rc-modal-title").text('Booking')
     if ($('.rc-booking_modal__flat_info__img + div').text().charAt($('.rc-booking_modal__flat_info__img + div').text().length-1) == '1') {
