@@ -465,7 +465,7 @@ bodyClass.observe(document.body, { attributes: true })
 let price_flat = 0
 let prepayment_flat = 0
 function translateModal(lang) {
-let pr_check = $('rc-checkbox input').clone(true)
+let pr_check = $('.rc-checkbox input').clone(true)
   if (lang == 'eng') {
     rus['rc-booking_form__pay_info div'] = $('.rc-booking_form__pay_info div').text() 
     price_flat = rus['rc-booking_form__pay_info div'].match(/[-]?[0-9]+(.[0-9]+)?/)[0]
