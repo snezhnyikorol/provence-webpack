@@ -15,7 +15,6 @@ $(window).scroll(function(){
   } 
 });
 
-
 let rus = {};
 let menuState = false;
 var lang = 'rus'
