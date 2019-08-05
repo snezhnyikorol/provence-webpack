@@ -818,6 +818,11 @@ footer a, footer p {
 	left: 2.5%;
 }
 
+.video_slider {
+	position: relative;
+	z-index: 2;
+}
+
 .video_slider_bg {
 	width: 110%;
 	left: -5%;
@@ -825,7 +830,8 @@ footer a, footer p {
     border-radius: 10px;
     background-color: #f4f3f3;
     height: 90%;
-    top: 5%;
+	top: 5%;
+	z-index: 1;
 }
 
 .video_item {

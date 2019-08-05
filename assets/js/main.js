@@ -323,8 +323,7 @@ function setCaretPosition(elemId, caretPos) {
 }
 
 function translateWidget(to) {
-  let first = $('.rc-flat').eq(0)
-  let second = $('.rc-flat').eq(1)
+
   if (to == 'eng') {
 
     rus['eabr-header-title'] = $('.eabr-header-title').text()
@@ -354,6 +353,8 @@ function translateWidget(to) {
 }
 
 function translateFlat(lang) {
+  let first = $('.rc-flat').eq(0)
+  let second = $('.rc-flat').eq(1)
   if (lang == 'eng'){
   
     rus['rc-text-center'] =  $(".rc-text-center").text()
