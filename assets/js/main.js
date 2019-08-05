@@ -465,7 +465,7 @@ bodyClass.observe(document.body, { attributes: true })
 let price_flat = 0
 let prepayment_flat = 0
 function translateModal(lang) {
-
+let pr_check = $('rc-checkbox input').clone(true)
   if (lang == 'eng') {
     rus['rc-booking_form__pay_info div'] = $('.rc-booking_form__pay_info div').text() 
     price_flat = rus['rc-booking_form__pay_info div'].match(/[-]?[0-9]+(.[0-9]+)?/)[0]
@@ -497,8 +497,9 @@ function translateModal(lang) {
     $('[for=comment]').text('Your wishes')
 
     $('.rc-booking_form__pay_info div').text(`The reservation amount is ${price_flat} rubles. In order to book an apartment you need to make an advance payment of ${prepayment_flat} rubles. You will pay the remaining amount upon check-in.`)
-    rus['rc-checkbox'] = $('.rc-checkbox').html()
-    $('.rc-checkbox').html(`<div class="rc-checkbox" style="margin-bottom: 0px;"><label><input type="checkbox" value="false">I agree to the terms of the user agreement</label></div>`)
+    rus['rc-checkbox'] = $('.rc-checkbox label').html()
+    $('.rc-checkbox label').html(`<label>I agree to the terms of the user agreement`)
+    $('.rc-checkbox label').prepend(pr_check)
     $('.rc-btn-default').text('Cancel')
     $('.rc-flat__book__btn').text('Book')
   } else if (lang == 'rus') {
@@ -513,13 +514,14 @@ function translateModal(lang) {
     $('[for=phone]').text(rus['[for=phone]'])
     $('[for=comment]').text(rus['[for=comment]'])
     $('.rc-booking_form__pay_info div').text(rus['rc-booking_form__pay_info div']) 
-    $('.rc-checkbox').html(rus['rc-checkbox'])
+    $('.rc-checkbox label').html(rus['rc-checkbox'])
+    $('.rc-checkbox label').prepend(pr_check)
     $('.rc-btn-default').text('Отмена')
     $('.rc-flat__book__btn').text('Забронировать')
   }
 }
 
 $('body').on('click','.rc-search_form__search_btn', function () {
-  setTimeout(function () {  translateFlat(lang)}, 3000)
+  setTimeout(function () {  translateFlat(lang)}, 2000)
 
 })
