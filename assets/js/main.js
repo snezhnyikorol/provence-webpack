@@ -358,7 +358,6 @@ function translateFlat(lang) {
   if (lang == 'eng'){
   
     rus['rc-text-center'] =  $(".rc-text-center").text()
-    $("rc-text-center").text('Loading...')
     rus['rc-flat__price__cur'] = $(".rc-flat__price__cur").text()
     $(".rc-flat__price__cur").text('RUB per day')
     rus['rc-flat__more__btn"'] = $(".rc-flat__more__btn").text()
@@ -470,7 +469,7 @@ function translateModal(lang) {
   if (lang == 'eng') {
     rus['rc-booking_form__pay_info div'] = $('.rc-booking_form__pay_info div').text() 
     price_flat = rus['rc-booking_form__pay_info div'].match(/[-]?[0-9]+(.[0-9]+)?/)[0]
-    prepayment_flat = rus['rc-booking_form__pay_info div'].match(/[-]?[0-9]+(.[0-9]+)?/)[1]
+    prepayment_flat = rus['rc-booking_form__pay_info div'].slice(40).match(/[-]?[0-9]+(.[0-9]+)?/)[0]
     rus['rc-modal-title'] = $(".rc-modal-title").text()
     $(".rc-modal-title").text('Booking')
     if ($('.rc-booking_modal__flat_info__img + div').text().charAt($('.rc-booking_modal__flat_info__img + div').text().length-1) == '1') {
@@ -523,8 +522,4 @@ function translateModal(lang) {
 $('body').on('click','.rc-search_form__search_btn', function () {
   setTimeout(function () {  translateFlat(lang)}, 3000)
 
-})
-
-$('body').on('DOMContentLoaded', function () {
-  alert('a')
 })
