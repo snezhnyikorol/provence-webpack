@@ -520,3 +520,17 @@ $('body').on('click','.rc-search_form__search_btn', function () {
   setTimeout(function () {  translateFlat(lang)}, 1000)
 
 })
+
+function vidplay(num) {
+  var video = document.getElementById("video"+num);
+  var button = document.getElementById("play"+num);
+  if (video.paused) {
+     video.play();
+    $(button).css({'background-image': "url('assets/img/icons/pause.png')"})
+    $(button).animate({opacity: "0"}, 500)
+  } else {
+     video.pause();
+     $(button).css({'opacity': "1"})
+     $(button).css({'background-image': "url('assets/img/icons/play.png')"})
+  }
+}

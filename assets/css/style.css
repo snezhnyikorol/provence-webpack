@@ -1299,17 +1299,31 @@ footer a, footer p {
 	display: none;
 }
 
-.ytp-title {
-	display: none !important;
+#play1, #play2 {
+	z-index: 1000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('../img/icons/play.png');
+	background-size: 20%;
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-color: transparent;
+	border: none;
 }
 
+
+
+/* 
 .video-container{
 	overflow:hidden;
 	position:relative;
   }
   
   
-  .video-container iframe,{
+  .video-container iframe{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -1317,7 +1331,7 @@ footer a, footer p {
 	height: 100%;
   }
   
-  .video-container iframe, {
+  .video-container iframe {
 	pointer-events: none;
   }
   .video-container iframe{
@@ -1330,4 +1344,4 @@ footer a, footer p {
   .video-foreground{
 	pointer-events:none;
   }
-  
+   */
