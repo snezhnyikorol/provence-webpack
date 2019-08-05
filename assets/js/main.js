@@ -525,3 +525,7 @@ $('body').on('click','.rc-search_form__search_btn', function () {
   setTimeout(function () {  translateFlat(lang)}, 3000)
 
 })
+
+$('body').on('DOMContentLoaded', function () {
+  alert('a')
+})
