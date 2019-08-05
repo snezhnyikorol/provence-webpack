@@ -487,7 +487,7 @@ function translateModal(lang) {
     rus['rc-booking_form__price div:eq(1)'] = $('.rc-booking_form__price div:eq(1)').html()
     $('.rc-booking_form__price div:eq(1)').html(`Prepayment<br>${prepayment_flat} rubles`)
     rus['[for=name]'] = $('[for=name]').text()
-    $('[for=name]').text('Name*')
+    $('[for=name]').eq(0).text('Name*')
     rus['[for=guests]'] = $('[for=guests]').text()
     $('[for=guests]').text('Guests')
     rus['[for=phone]'] = $('[for=phone]').text()
@@ -505,7 +505,7 @@ function translateModal(lang) {
     $(".rc-booking_form__dates label[for=rc-checkin]:eq(1)").text(rus['label[for=rc-checkin]:eq(1)'])
     $('.rc-booking_form__price div:eq(0)').html(rus['rc-booking_form__price div:eq(0)'])
     $('.rc-booking_form__price div:eq(1)').html(rus['rc-booking_form__price div:eq(1)'])
-    $('[for=name]').text(rus['[for=name]'])
+    $('[for=name]').eq(0).text(rus['[for=name]'])
     $('[for=guests]').text(rus['[for=guests]'])
     $('[for=phone]').text(rus['[for=phone]'])
     $('[for=comment]').text(rus['[for=comment]'])
@@ -516,6 +516,6 @@ function translateModal(lang) {
 }
 
 $('body').on('click','.rc-search_form__search_btn', function () {
-  setTimeout(function () {  translateFlat(lang)}, 2000)
+  setTimeout(function () {  translateFlat(lang)}, 1000)
 
 })
