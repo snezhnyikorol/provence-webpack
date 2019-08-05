@@ -357,7 +357,8 @@ function translateFlat(lang) {
   let second = $('.rc-flat').eq(1)
   if (lang == 'eng'){
   
-    rus['rc-text-center'] =  $(".rc-text-center").text()
+    rus['rc-text-center'] =  $(".rc-text-center").html()
+    $('.rc-text-center').html(`<div class="rc-text-center"><p>There are no free options for selected dates, please contact us, we always have something to offer you.</p><p><!-- react-text: 647 -->phone: <!-- /react-text --><!-- react-text: 648 -->+79219551940<!-- /react-text --><br><!-- react-text: 650 -->e-mail: <!-- /react-text --><!-- react-text: 651 -->torozerova@gmail.com<!-- /react-text --><br><!-- react-text: 653 -->Company <!-- /react-text --><!-- react-text: 654 -->Oksana Torozerova<!-- /react-text --></p></div>`)
     rus['rc-flat__price__cur'] = $(".rc-flat__price__cur").text()
     $(".rc-flat__price__cur").text('RUB per day')
     rus['rc-flat__more__btn"'] = $(".rc-flat__more__btn").text()
