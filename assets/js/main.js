@@ -1,3 +1,21 @@
+// import {$, jQuery} from 'jquery';
+import 'popper.js';
+import  'bootstrap';
+import 'slick-slider';
+import 'slick-lightbox';
+
+require('../fonts/style.css');
+require('slick-slider/slick/slick.css');
+require('slick-slider/slick/slick-theme.css');
+require('slick-lightbox/dist/slick-lightbox.css')
+require('bootstrap/dist/css/bootstrap.css');
+
+
+require('../css/style.css');
+
+// global.jQuery = $;
+// global.$ = $;
+
 $(window).on('load', function () {
   var $preloader = $('.preloader_container')
   $preloader.delay(500).fadeOut('slow');
@@ -23,13 +41,13 @@ var lang = 'rus'
 var $root = $('html, body');
 
 $( document ).ready(function() {
-  $('.top_slider').slick(
+  $('.top_slider').not('.slick-initialized').slick(
     {
       lazyLoad: 'progressive',
       initialSlide: 12
     }
   )
-  $('.photo_slider').slick(
+  $('.photo_slider').not('.slick-initialized').slick(
     {
       initialSlide: 7,
       lazyLoad: 'progressive'
@@ -120,24 +138,22 @@ $('.map_item').click(function () {
 })
 
 function move() {
-  pillow1 = $('#pillow1').position();
-  pillow2 = $('#pillow2').position();
-  p1 = $('#p1').position();
-  p2 = $('#p2').position();
-  feather1 = $('#feather1').position();
-  feather2 = $('#feather2').position();
-  feather3 = $('#feather3').position();
-  feather4 = $('#feather4').position();
-  feather5 = $('#feather5').position();
-  feather6 = $('#feather6').position();
-  feather7 = $('#feather7').position();
-  feather8 = $('#feather8').position();
-  feather9 = $('#feather9').position();
-  feather10 = $('#feather10').position();
-  feather11 = $('#feather11').position();
-  feather12 = $('#feather12').position();
-
-
+  let pillow1 = $('#pillow1').position();
+  let pillow2 = $('#pillow2').position();
+  let p1 = $('#p1').position();
+  let p2 = $('#p2').position();
+  let feather1 = $('#feather1').position();
+  let feather2 = $('#feather2').position();
+  let feather3 = $('#feather3').position();
+  let feather4 = $('#feather4').position();
+  let feather5 = $('#feather5').position();
+  let feather6 = $('#feather6').position();
+  let feather7 = $('#feather7').position();
+  let feather8 = $('#feather8').position();
+  let feather9 = $('#feather9').position();
+  let feather10 = $('#feather10').position();
+  let feather11 = $('#feather11').position();
+  let feather12 = $('#feather12').position();
 
   $(document).on('mousemove', function(e) {
 
@@ -519,6 +535,16 @@ function translateModal(lang) {
 $('body').on('click','.rc-search_form__search_btn', function () {
   setTimeout(function () {  translateFlat(lang)}, 1000)
 
+})
+
+document.getElementById("play1").addEventListener('click', function (event) {
+  vidplay(1)
+  event.preventDefault()  
+})
+
+document.getElementById("play2").addEventListener('click', function (event) {
+  vidplay(2)
+  event.preventDefault()  
 })
 
 function vidplay(num) {
