@@ -10,6 +10,7 @@ module.exports = {
     path.resolve(__dirname, 'assets/js/main.js'),
   ],
   output: {
+    path: path.resolve(__dirname, 'docs'),
     filename: 'assets/js/bundle.js',
   },
   devtool: "source-map",
